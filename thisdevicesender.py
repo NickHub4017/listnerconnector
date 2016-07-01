@@ -1,3 +1,4 @@
+import os
 import socket
 import sys
 import time
@@ -16,7 +17,7 @@ from watchdog.events import FileSystemEventHandler
 # observer.schedule(event_handler, path='.', recursive=False)
 # observer.start()
 
-pipe_name = 'pipe_test'
+pipe_name = 'z'
 
 def md5(fname):
     hash_md5 = hashlib.md5()
@@ -35,7 +36,7 @@ def makeconn(addr,port):
 prevmd5=0;
 
 try:
-    sock = makeconn('localhost', 8890)
+    sock = makeconn('localhost', 8891)
 
     while (True):
         #data = sock.recv(16)
@@ -54,9 +55,13 @@ try:
             print p,q
             sock = makeconn(p,q)
         else:
-            pipein = open(pipe_name, 'r')
-            line = pipein.readline()[:-1]
-            sock.sendall(line)
+            if not os.path.exists(pipe_name):
+                #os.mkfifo(pipe_name)
+                print "No PIPE"
+            else:
+                pipein = open(pipe_name, 'r')
+                line = pipein.readline()[:-1]
+                sock.sendall(line)
 
 
 

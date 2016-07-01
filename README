@@ -1,0 +1,11 @@
+next devices
+    nextdevice.py
+    nextdevice.py
+
+data generator
+    datagenerator.py-- generator will send data to the pipe and thisdevicesender.py send them to clients
+
+
+controller
+    listner.py
+    
