@@ -17,7 +17,7 @@ from watchdog.events import FileSystemEventHandler
 # observer.schedule(event_handler, path='.', recursive=False)
 # observer.start()
 
-pipe_name = 'z'
+pipe_name = 'pipeline'
 
 def md5(fname):
     hash_md5 = hashlib.md5()

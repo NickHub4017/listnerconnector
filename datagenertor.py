@@ -1,5 +1,9 @@
+#mkfifo pipeline
+#ls -l > pipeline
+
+
 import os, time, sys
-pipe_name = 'pipe_testz'
+pipe_name = 'pipeline'
 
 def child( ):
     pipeout = os.open(pipe_name, os.O_WRONLY)
@@ -7,7 +11,7 @@ def child( ):
     while True:
         time.sleep(1)
         os.write(pipeout, 'Number %03d\n' % counter)
-        print "datagenerator:- "+counter
+        print "datagenerator:- "+str(counter)
         counter = (counter+1)
 
 def parent( ):
