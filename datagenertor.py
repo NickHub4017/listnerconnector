@@ -10,16 +10,30 @@ def child( ):
     counter = 0
     while True:
         time.sleep(1)
-        os.write(pipeout, 'Number %03d\n' % counter)
-        print "datagenerator:- "+str(counter)
+        os.write(pipeout, str(counter)+"\n")
+        print "datagened Number :- "+str(counter)
         counter = (counter+1)
 
-def parent( ):
-    pipein = open(pipe_name, 'r')
-    while True:
-        line = pipein.readline()[:-1]
-        print 'Parent %d got "%s" at %s' % (os.getpid(), line, time.time( ))
 
 if not os.path.exists(pipe_name):
     os.mkfifo(pipe_name)
 child();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def parent( ):
+#     pipein = open(pipe_name, 'r')
+#     while True:
+#         line = pipein.readline()[:-1]
+#         print 'Parent %d got "%s" at %s' % (os.getpid(), line, time.time( ))

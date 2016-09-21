@@ -4,8 +4,7 @@ import sys
 import time
 
 import hashlib
-from watchdog.observers import Observer
-from watchdog.events import FileSystemEventHandler
+
 
 #
 # class MyHandler(FileSystemEventHandler):
