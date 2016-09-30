@@ -1,16 +1,31 @@
 import sqlite3
 
-conn = sqlite3.connect('example.db')
+class initdb:
+    def __init__(self):
+        print "iniialise database"
 
-cursor = conn.cursor()
+        cursor,conn=self.connecttodb();
+        cursor.execute('''CREATE TABLE IF NOT EXISTS deamonmetadata (device text, msgdate TIMESTAMP DEFAULT DATETIME('now'), ip text, port int,type text, protocol text)''')
+        cursor.execute('''CREATE TABLE IF NOT EXISTS devicemetadata (msgdate TIMESTAMP DEFAULT DATETIME('now'), key text, value text)''')
+        cursor.execute("insert into deamonmetadata (device) values ('inputdeamon');")
+        cursor.execute("insert into deamonmetadata (device) values ('outputdeamon');")
+        cursor.execute("insert into deamonmetadata (device) values ('controldeamon');")
+        self.closedb(conn)
 
-cursor.execute('''CREATE TABLE netmetadata(date text, ip text, port int,  real, price real)''')
+    def connecttodb(self):
+        conn = sqlite3.connect('pnp.db')
+        cursor = conn.cursor()
+        return  cursor,conn
 
-cursor.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
+    def closedb(self,conn):
+        conn.commit()
+        conn.close()
 
-# Save (commit) the changes
-conn.commit()
 
-# We can also close the connection if we are done with it.
-# Just be sure any changes have been committed or they will be lost.
-conn.close()
+
+
+
+
+#cursor.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
+
+
