@@ -16,6 +16,7 @@ class initdb:
         cursor.execute("insert into devicemetadata (key) values ('sysid');")
         cursor.execute("insert into devicemetadata (key) values ('sysname');")
         cursor.execute("insert into devicemetadata (key) values ('deviceparams');")
+        cursor.execute("insert into devicemetadata (key) values ('progparams');")
 
         self.closedb(conn)
 
@@ -28,7 +29,13 @@ class initdb:
         conn.commit()
         conn.close()
 
-    
+
+    def updatefulldeamondata(self,jsondeamondata,msgdate):
+        cursor, conn = self.connecttodb();
+        cursor.execute(
+            """UPDATE deamonmetadata SET msgdate = ? ,ip = ?,port = ?,type = ?,protocol = ? WHERE device= ? """,
+            (msgdate, jsondeamondata["ip"], jsondeamondata["port"], jsondeamondata["type"], jsondeamondata["protocol"],jsondeamondata["name"]))
+        self.closedb(conn);
 
 
 
