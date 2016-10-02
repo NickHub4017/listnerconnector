@@ -10,6 +10,13 @@ class initdb:
         cursor.execute("insert into deamonmetadata (device) values ('inputdeamon');")
         cursor.execute("insert into deamonmetadata (device) values ('outputdeamon');")
         cursor.execute("insert into deamonmetadata (device) values ('controldeamon');")
+
+        cursor.execute("insert into devicemetadata (key) values ('subdate');")
+        cursor.execute("insert into devicemetadata (key) values ('updatefrom');")
+        cursor.execute("insert into devicemetadata (key) values ('sysid');")
+        cursor.execute("insert into devicemetadata (key) values ('sysname');")
+        cursor.execute("insert into devicemetadata (key) values ('deviceparams');")
+
         self.closedb(conn)
 
     def connecttodb(self):
@@ -21,6 +28,7 @@ class initdb:
         conn.commit()
         conn.close()
 
+    
 
 
 
