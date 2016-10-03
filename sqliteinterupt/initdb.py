@@ -1,12 +1,12 @@
 import sqlite3
 
-class initdb:
+class initdbclass():
     def __init__(self):
         print "iniialise database"
 
         cursor,conn=self.connecttodb();
-        cursor.execute('''CREATE TABLE IF NOT EXISTS deamonmetadata (device text, msgdate TIMESTAMP DEFAULT DATETIME('now'), ip text, port int,type text, protocol text)''')
-        cursor.execute('''CREATE TABLE IF NOT EXISTS devicemetadata (msgdate TIMESTAMP DEFAULT DATETIME('now'), key text, value text)''')
+        cursor.execute('''CREATE TABLE IF NOT EXISTS deamonmetadata (device text, msgdate TIMESTAMP , ip text, port int,type text, protocol text)''')
+        cursor.execute('''CREATE TABLE IF NOT EXISTS devicemetadata (msgdate TIMESTAMP, key text, value text)''')
         cursor.execute("insert into deamonmetadata (device) values ('inputdeamon');")
         cursor.execute("insert into deamonmetadata (device) values ('outputdeamon');")
         cursor.execute("insert into deamonmetadata (device) values ('controldeamon');")
