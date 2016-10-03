@@ -5,18 +5,23 @@ class initdbclass():
         print "iniialise database"
 
         cursor,conn=self.connecttodb();
-        cursor.execute('''CREATE TABLE IF NOT EXISTS deamonmetadata (device text, msgdate TIMESTAMP , ip text, port int,type text, protocol text)''')
-        cursor.execute('''CREATE TABLE IF NOT EXISTS devicemetadata (msgdate TIMESTAMP, key text, value text)''')
-        cursor.execute("insert into deamonmetadata (device) values ('inputdeamon');")
-        cursor.execute("insert into deamonmetadata (device) values ('outputdeamon');")
-        cursor.execute("insert into deamonmetadata (device) values ('controldeamon');")
+        cursor.execute('''CREATE TABLE IF NOT EXISTS deamonmetadata (device text primary key, msgdate TIMESTAMP , ip text, port int,type text, protocol text)''')
+        cursor.execute('''CREATE TABLE IF NOT EXISTS devicemetadata (msgdate TIMESTAMP, key text primary key, value text)''')
 
-        cursor.execute("insert into devicemetadata (key) values ('subdate');")
-        cursor.execute("insert into devicemetadata (key) values ('updatefrom');")
-        cursor.execute("insert into devicemetadata (key) values ('sysid');")
-        cursor.execute("insert into devicemetadata (key) values ('sysname');")
-        cursor.execute("insert into devicemetadata (key) values ('deviceparams');")
-        cursor.execute("insert into devicemetadata (key) values ('progparams');")
+        try:
+            cursor.execute("insert into deamonmetadata (device) values ('inputdeamon');")
+            cursor.execute("insert into deamonmetadata (device) values ('outputdeamon');")
+            cursor.execute("insert into deamonmetadata (device) values ('controldeamon');")
+
+            cursor.execute("insert into devicemetadata (key) values ('subdate');")
+            cursor.execute("insert into devicemetadata (key) values ('updatefrom');")
+            cursor.execute("insert into devicemetadata (key) values ('sysid');")
+            cursor.execute("insert into devicemetadata (key) values ('sysname');")
+            cursor.execute("insert into devicemetadata (key) values ('deviceparams');")
+            cursor.execute("insert into devicemetadata (key) values ('progparams');")
+
+        except:
+            print("Insert error ")
 
         self.closedb(conn)
 
