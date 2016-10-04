@@ -9,9 +9,9 @@ class initdbclass():
         cursor.execute('''CREATE TABLE IF NOT EXISTS devicemetadata (msgdate TIMESTAMP, key text primary key, value text)''')
 
         try:
-            cursor.execute("insert into deamonmetadata (device) values ('inputdeamon');")
-            cursor.execute("insert into deamonmetadata (device) values ('outputdeamon');")
-            cursor.execute("insert into deamonmetadata (device) values ('controldeamon');")
+            cursor.execute("insert into deamonmetadata ('device') values ('inpdeamon');")
+            cursor.execute("insert into deamonmetadata (device) values ('oudeamon');")
+            cursor.execute("insert into deamonmetadata (device) values ('cntrldeamon');")
 
             cursor.execute("insert into devicemetadata (key) values ('subdate');")
             cursor.execute("insert into devicemetadata (key) values ('updatefrom');")
@@ -20,8 +20,9 @@ class initdbclass():
             cursor.execute("insert into devicemetadata (key) values ('deviceparams');")
             cursor.execute("insert into devicemetadata (key) values ('progparams');")
 
-        except:
-            print("Insert error ")
+
+        except Exception as e:
+            print("Insert error "+e.message.capitalize())
 
         self.closedb(conn)
 
@@ -32,15 +33,25 @@ class initdbclass():
 
     def closedb(self,conn):
         conn.commit()
-        conn.close()
+        #conn.close()
 
 
     def updatefulldeamondata(self,jsondeamondata,msgdate):
         cursor, conn = self.connecttodb();
+
         cursor.execute(
             """UPDATE deamonmetadata SET msgdate = ? ,ip = ?,port = ?,type = ?,protocol = ? WHERE device= ? """,
             (msgdate, jsondeamondata["ip"], jsondeamondata["port"], jsondeamondata["type"], jsondeamondata["protocol"],jsondeamondata["name"]))
+
         self.closedb(conn);
+
+    def updatedevicemetadata(self,jsonkey,jsonvalue,msgdate):
+        cursor, conn = self.connecttodb();
+        cursor.execute(
+            """UPDATE devicemetadata SET value = ? ,msgdate = ? WHERE key= ? """,(jsonvalue,msgdate,jsonkey))
+        self.closedb(conn);
+
+
 
 
 
