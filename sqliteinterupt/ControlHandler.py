@@ -8,6 +8,8 @@ class ControlHandler:
         print "Handler initiated"
 
     def insertcontrolmessage(self,controlmsg):
+        print controlmsg
+
         controlmsgjson = json.loads(controlmsg)
 
         inputdeamonprop=controlmsg["inpdeamon"]

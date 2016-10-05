@@ -1,5 +1,5 @@
 import sqlite3
-
+import datetime;
 class initdbclass():
     def __init__(self):
         print "iniialise database"
@@ -19,6 +19,8 @@ class initdbclass():
             cursor.execute("insert into devicemetadata (key) values ('sysname');")
             cursor.execute("insert into devicemetadata (key) values ('deviceparams');")
             cursor.execute("insert into devicemetadata (key) values ('progparams');")
+            cursor.execute("insert into devicemetadata (key,value) values ('controlip','127.0.0.1');")
+            cursor.execute("insert into devicemetadata (key,value) values ('controlport',8080);")
 
 
         except Exception as e:
@@ -51,6 +53,18 @@ class initdbclass():
             """UPDATE devicemetadata SET value = ? ,msgdate = ? WHERE key= ? """,(jsonvalue,msgdate,jsonkey))
         self.closedb(conn);
 
+
+    def updateSubdate(self,value):
+
+        self.updatedevicemetadata(value,"",value);
+
+    def getdata(self,keyval):
+        cursor ,conn=self.connecttodb()
+        data = (keyval,)
+        cursor.execute('SELECT * FROM devicemetadata WHERE key=?', data)
+        fetcheddata=cursor.fetchone()
+        #return fetcheddata
+        return fetcheddata[2]
 
 
 
