@@ -16,10 +16,10 @@ class DeamonClient:
         if(self.socket is not None):
             currentstr=""
             #isbegin=False
-            #while(not isbegin):#ToDo remove onetime buffer read and add dynamic reading.
-            self.controlmessage=self.socket.recv(self.buffersize)
-            self.handler=ControlHandler()
-            self.handler.insertcontrolmessage(self.controlmessage)
+            while(1):#ToDo remove onetime buffer read and add dynamic reading.
+                self.controlmessage=str(self.socket.recv(self.buffersize))
+                self.handler=ControlHandler()
+                self.handler.insertcontrolmessage(self.controlmessage)
 
 
 

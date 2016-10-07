@@ -8,20 +8,20 @@ class ControlHandler:
         print "Handler initiated"
 
     def insertcontrolmessage(self,controlmsg):
-        print controlmsg
+        print type(controlmsg)
 
         controlmsgjson = json.loads(controlmsg)
+        print type(controlmsgjson)
+        inputdeamonprop=controlmsgjson["inpdeamon"]
+        outputdeamonprop = controlmsgjson["oupdeamon"]
+        cntrldeamonprop = controlmsgjson["cntrldeamon"]
 
-        inputdeamonprop=controlmsg["inpdeamon"]
-        outputdeamonprop = controlmsg["oupdeamon"]
-        cntrldeamonprop = controlmsg["cntrldeamon"]
-
-        controlmessagetimestamp=controlmsg["timestamp"]
-        controlmessagefromip = controlmsg["fromip"]
-        controlmessagesysid = controlmsg["sysid"]
-        controlmessagesysname = controlmsg["sysname"]
-        controlmessageprogramproperties = controlmsg["programproperties"]
-        controlmessagedeviceproperties = controlmsg["deviceproperties"]
+        controlmessagetimestamp=controlmsgjson["timestamp"]
+        controlmessagefromip = controlmsgjson["fromip"]
+        controlmessagesysid = controlmsgjson["sysid"]
+        controlmessagesysname = controlmsgjson["sysname"]
+        controlmessageprogramproperties = controlmsgjson["programproperties"]
+        controlmessagedeviceproperties = controlmsgjson["deviceproperties"]
 
     def submitdatatodatabase(self):
         print "todo implement the db submit code"

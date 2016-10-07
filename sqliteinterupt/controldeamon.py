@@ -7,3 +7,4 @@ controlport=currentDb.getdata("controlport")
 controllink=DeamonLinkFactory("client").getConnection(controlip,controlport)
 controllink.connect()
 controllink.getdata()
+print "hi"
