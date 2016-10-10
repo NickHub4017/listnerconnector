@@ -9,8 +9,13 @@ class DeamonClient:
         self.buffersize=1024
 
     def connect(self):
-        self.socket = socket.socket()
-        self.socket.connect((self.ip, self.port))
+        try:
+            self.socket = socket.socket()
+            self.socket.connect((self.ip, self.port))
+            return True
+        except:
+            return False
+
 
     def getdata(self):
         if(self.socket is not None):
@@ -20,7 +25,13 @@ class DeamonClient:
                 self.controlmessage=str(self.socket.recv(self.buffersize))
                 self.handler=ControlHandler()
                 self.handler.insertcontrolmessage(self.controlmessage)
+        else:
+            print "Sory Control deamon socket has an error"
 
+    def disconnect(self):
+        if (self.socket is not None):
+            self.socket.close()
+            self.socket=None
 
 
 
