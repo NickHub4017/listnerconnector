@@ -29,7 +29,7 @@ class initdbclass():
         self.closedb(conn)
 
     def connecttodb(self):
-        conn = sqlite3.connect('pnp.db')
+        conn = sqlite3.connect('/home/nrv/PycharmProjects/listnerconnector/pnp.db')
         cursor = conn.cursor()
         return  cursor,conn
 

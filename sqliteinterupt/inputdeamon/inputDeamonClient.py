@@ -14,6 +14,11 @@ class inputDeamonClient:
         except:
             return False
 
+    def getconnection(self,ipinp,portinp):
+        self.ip = ipinp
+        self.port = portinp
+        return self;
+
     def getdata(self):
         if (self.socket is not None):
             currentstr = ""
@@ -21,6 +26,7 @@ class inputDeamonClient:
             while (1):
                 inputmessage = str(self.socket.recv(self.buffersize))
                 self.handler = inputHandler()
+                print "---"
                 self.handler.writedata(inputmessage)
         else:
             print "Sorry input deamon socket has an error"
