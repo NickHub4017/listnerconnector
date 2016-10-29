@@ -19,7 +19,7 @@ while(1):
     data={}
     data['inpdeamon']={"ip":"127.0.0.1","port":8090,"name":'inpdeamon',"type":"client","protocol":"tcp"}
     data["oupdeamon"]={"ip":"127.0.0.1","port":8100,"name":'oudeamon',"type":"client","protocol":"tcp"}
-    data["cntrldeamon"]={"ip":"127.0.0.1","port":8080,"name":'cntrldeamon',"type":"client","protocol":"tcp"}
+    data["cntrldeamon"]={"ip":"127.0.0.1","port":8070,"name":'cntrldeamon',"type":"client","protocol":"tcp"}
 
     data["timestamp"]="2016-10-07"
     data["fromip"]="127.0.0.1"
@@ -31,6 +31,6 @@ while(1):
     print data['inpdeamon']
     conn.send(json.dumps(data))  # echo
     time.sleep(5)
-    data["cntrldeamon"]["port"]=8090
+    data["cntrldeamon"]["port"]=8070
     conn.send(json.dumps(data))  # echo
     #conn.close()
