@@ -25,6 +25,8 @@ class DeamonClient:
                 self.controlmessage=str(self.socket.recv(self.buffersize))
                 self.handler=ControlHandler()
                 self.handler.insertcontrolmessage(self.controlmessage)
+                print "Control deamon data updated"
+                break;
         else:
             print "Sory Control deamon socket has an error"
 
