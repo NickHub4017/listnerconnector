@@ -2,7 +2,7 @@ import sqlite3
 import datetime;
 class initdbclass():
     def __init__(self):
-        print "iniialise database"
+        #print "iniialise database"
 
         cursor,conn=self.connecttodb();
         cursor.execute('''CREATE TABLE IF NOT EXISTS deamonmetadata (device text primary key, msgdate TIMESTAMP , ip text, port int,type text, protocol text)''')
@@ -24,12 +24,13 @@ class initdbclass():
 
 
         except Exception as e:
-            print("Insert error "+e.message.capitalize())
+            #print("Insert error "+e.message.capitalize()) #ToDo change the code
+            test=1
 
         self.closedb(conn)
 
     def connecttodb(self):
-        conn = sqlite3.connect('/home/nrv/PycharmProjects/listnerconnector/pnp.db')
+        conn = sqlite3.connect('/home/nrv/PycharmProjects/listnerconnector/pnp.db')#ToDo change the file destination as common folder.
         cursor = conn.cursor()
         return  cursor,conn
 
