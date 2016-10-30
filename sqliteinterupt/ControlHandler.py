@@ -11,9 +11,9 @@ class ControlHandler:
         print "Handler initiated"
 
     def insertcontrolmessage(self,controlmsg):
-        print "@json:- ",controlmsg
+        #print "@json:- ",controlmsg
         controlmsgjson = json.loads(controlmsg)
-        print controlmsgjson
+        #print controlmsgjson
         inputdeamonprop=controlmsgjson["inpdeamon"]
         outputdeamonprop = controlmsgjson["oupdeamon"]
         cntrldeamonprop = controlmsgjson["cntrldeamon"]

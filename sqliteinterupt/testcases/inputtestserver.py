@@ -12,11 +12,12 @@ import os
 #
 # signal.signal(signal.SIGINT, sigint_handler)
 
-TCP_IP = '192.168.43.125'
+TCP_IP = '127.0.0.1'
 TCP_PORT = 8050
 BUFFER_SIZE = 20  # Normally 1024, but we want fast response
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 s.bind((TCP_IP, TCP_PORT))
 s.listen(1)
 while(1):
@@ -28,16 +29,9 @@ while(1):
         #print "received data:", data
     data={}
 
-    for i in range(0,150):
+    while(1):
     #while()
         data["audio"] = random.random()
-        time.sleep(0.25)
-        conn.send(json.dumps(data))  # echo
-
-    time.sleep(10)
-    for i in range(0, 150):
-        # while()
-        data["audio"] = random.random()
-        time.sleep(0.25)
+        time.sleep(1)
         conn.send(json.dumps(data))  # echo
     conn.close()

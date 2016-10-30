@@ -1,3 +1,5 @@
+##Client Receiving
+
 
 import socket
 from inputHandler import inputHandler
@@ -9,8 +11,9 @@ class inputDeamonClient:
     def connect(self):
         try:
             self.socket = socket.socket()
-            self.socket.settimeout(10)
+            self.socket.settimeout(5)
             self.socket.connect((self.ip, self.port))
+
             return True
         except:
             return False
@@ -21,7 +24,6 @@ class inputDeamonClient:
         return self;
 
     def getdata(self):
-
         if (self.socket is not None):
             currentstr = ""
             # isbegin=False
