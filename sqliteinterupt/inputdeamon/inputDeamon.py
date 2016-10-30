@@ -23,6 +23,7 @@ while(1):
     type=datarow[4]
     print inpip," ",inpport," ",type
     if(type=="client"):
+
         inputdeamon = factory.getinputDeamon("client").getconnection(inpip,inpport)
 
         while(not inputdeamon.connect()):
@@ -30,7 +31,9 @@ while(1):
             print "Input Link Connection error occured"
         try:
             inputdeamon.getdata()
+            print "inclient"
         except Exception,e:
-            #print "Control Server Link gone ",e
+            print "Input Server Link gone ",e
             inputdeamon.disconnect()
+
 

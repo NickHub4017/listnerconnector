@@ -20,19 +20,26 @@ class inputDeamonClient:
         return self;
 
     def getdata(self):
+
         if (self.socket is not None):
             currentstr = ""
             # isbegin=False
+
+            self.handler = inputHandler()
             while (1):
-                inputmessage = str(self.socket.recv(self.buffersize))
-                self.handler = inputHandler()
-                print "---"
-                self.handler.writedata(inputmessage)
+                try:
+                    inputmessage = str(self.socket.recv(self.buffersize))
+                    if(not inputmessage):
+                        break
+                    print inputmessage
+                    self.handler.writedata(inputmessage)
+                except Exception as a:
+                    print a," error"
         else:
             print "Sorry input deamon socket has an error"
 
     def disconnect(self):
         if (self.socket is not None):
-            self.socket.close()
+            #self.socket.close()
             self.socket = None
 

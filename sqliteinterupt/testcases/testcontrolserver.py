@@ -17,7 +17,7 @@ while(1):
         #if not data: break
         #print "received data:", data
     data={}
-    data['inpdeamon']={"ip":"127.0.0.1","port":8090,"name":'inpdeamon',"type":"client","protocol":"tcp"}
+    data['inpdeamon']={"ip":"127.0.0.1","port":8050,"name":'inpdeamon',"type":"client","protocol":"tcp"}
     data["oupdeamon"]={"ip":"127.0.0.1","port":8100,"name":'oudeamon',"type":"client","protocol":"tcp"}
     data["cntrldeamon"]={"ip":"127.0.0.1","port":8070,"name":'cntrldeamon',"type":"client","protocol":"tcp"}
 
