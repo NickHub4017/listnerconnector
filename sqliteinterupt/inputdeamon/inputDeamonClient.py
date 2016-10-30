@@ -9,6 +9,7 @@ class inputDeamonClient:
     def connect(self):
         try:
             self.socket = socket.socket()
+            self.socket.settimeout(10)
             self.socket.connect((self.ip, self.port))
             return True
         except:
@@ -28,13 +29,16 @@ class inputDeamonClient:
             self.handler = inputHandler()
             while (1):
                 try:
+                    print "wait for recv"
                     inputmessage = str(self.socket.recv(self.buffersize))
                     if(not inputmessage):
                         break
-                    print inputmessage
+
                     self.handler.writedata(inputmessage)
                 except Exception as a:
                     print a," error"
+                    self.socket.close()
+                    break
         else:
             print "Sorry input deamon socket has an error"
 

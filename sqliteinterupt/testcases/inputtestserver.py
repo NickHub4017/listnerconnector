@@ -5,14 +5,14 @@ import time
 
 import signal
 import os
+#
+# def sigint_handler(signum, frame):
+#     p = os.system('echo %s|sudo -S %s' % ('ua741', 'tcpkill ip host 127.0.0.1 port 8050'))
+#     print 'Stop pressing the CTRL+C!'
+#
+# signal.signal(signal.SIGINT, sigint_handler)
 
-def sigint_handler(signum, frame):
-    p = os.system('echo %s|sudo -S %s' % ('ua741', 'tcpkill ip host 127.0.0.1 port 8050'))
-    print 'Stop pressing the CTRL+C!'
-
-signal.signal(signal.SIGINT, sigint_handler)
-
-TCP_IP = '127.0.0.1'
+TCP_IP = '192.168.43.125'
 TCP_PORT = 8050
 BUFFER_SIZE = 20  # Normally 1024, but we want fast response
 
@@ -27,15 +27,17 @@ while(1):
         #if not data: break
         #print "received data:", data
     data={}
-    data["audio"]=random.random()
+
     for i in range(0,150):
     #while()
+        data["audio"] = random.random()
         time.sleep(0.25)
         conn.send(json.dumps(data))  # echo
 
     time.sleep(10)
     for i in range(0, 150):
         # while()
+        data["audio"] = random.random()
         time.sleep(0.25)
         conn.send(json.dumps(data))  # echo
-    #conn.close()
+    conn.close()

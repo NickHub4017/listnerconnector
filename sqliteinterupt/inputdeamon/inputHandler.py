@@ -13,7 +13,7 @@ class inputHandler:
     def writedata(self,msg):
         #print self.pipeout
         try:
-            print msg
+            print msg, "wait for pipout"
             self.pipeout = open(self.pipename, 'w')
             self.pipeout.write(msg)
             self.pipeout.close()
