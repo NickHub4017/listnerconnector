@@ -1,3 +1,4 @@
+#ToDo add ping thread
 from inputDeamonFactory import inputDeamonFactory
 
 import time
@@ -33,4 +34,10 @@ def inputmainlink():
                 print "Input Server Link gone ",e
                 inputdeamon.disconnect()
 
+        elif(type=="server"):
+            try:
+                inputdeamon=factory.getinputDeamon("server").getconnection(inpip,inpport)
+                inputdeamon.serve()
+            except Exception as e:
+                print e
 

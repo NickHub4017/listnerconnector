@@ -23,11 +23,11 @@ print "----*----"
 while(1):
     print "loop terminated"
 
-    newpid = os.fork()
-    if newpid == 0:
+    newinputpid = os.fork()
+    if newinputpid == 0:
         inputmainlink()
     else:
-        print('Hello from parent', os.getpid(), newpid)
+        #print('Hello from parent', os.getpid(), newinputpid)
         while(1):##For get the data from control
             #inputthread=DeamonThreads(1)
             isclient=True
@@ -45,7 +45,7 @@ while(1):
                     controllink.getdata()
                     print "get data returened"
                     time.sleep(1)
-                    os.kill(newpid)
+                    os.kill(newinputpid)
                     break;
                 except Exception,e:
                     #print "Control Server Link gone ",e

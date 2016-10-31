@@ -1,4 +1,5 @@
 from inputDeamonClient import inputDeamonClient
+from inputDeamonServer import inputDeamonServer
 class inputDeamonFactory:
     def __init__(self):
         print "init factory"
@@ -7,4 +8,4 @@ class inputDeamonFactory:
         if(type=="client"):
             return inputDeamonClient()
         elif(type=="server"):
-            return None #ToDo add inputDeamonServer
+            return inputDeamonServer()
