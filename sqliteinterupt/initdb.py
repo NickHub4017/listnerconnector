@@ -1,5 +1,6 @@
 import sqlite3
 import datetime;
+import time;
 class initdbclass():
     def __init__(self):
         print "iniialise database"
@@ -29,7 +30,7 @@ class initdbclass():
         self.closedb(conn)
 
     def connecttodb(self):
-        conn = sqlite3.connect('pnp.db')
+        conn = sqlite3.connect('/home/nrv/PycharmProjects/listnerconnector/sqliteinterupt/pnp.db')
         cursor = conn.cursor()
         return  cursor,conn
 
@@ -63,6 +64,7 @@ class initdbclass():
 
     def getdata(self,keyval):
         cursor ,conn=self.connecttodb()
+
         data = (keyval,)
         cursor.execute('SELECT * FROM devicemetadata WHERE key=?', data)
         fetcheddata=cursor.fetchone()
@@ -71,15 +73,22 @@ class initdbclass():
 
     def getnodedata(self,keyval):
         cursor, conn = self.connecttodb()
+
         data = (keyval,)
         cursor.execute('SELECT * FROM deamonmetadata WHERE device=?', data)
         fetcheddata = cursor.fetchone()
         # return fetcheddata
         return fetcheddata
 
+    def updatedatadeamondata(self,cursor, column, data,deamon):
 
-
-
+        try:
+            cursor.execute(
+                "UPDATE deamonmetadata SET msgdate = ?,"+column+" = '"+data+"' WHERE device= ? ",
+                (time.time(),deamon,))
+            print cursor
+        except Exception, e:
+            print e.message
 
 #cursor.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
 
