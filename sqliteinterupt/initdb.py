@@ -24,13 +24,12 @@ class initdbclass():
 
 
         except Exception as e:
-            #print("Insert error "+e.message.capitalize()) #ToDo change the code
-            test=1
+            print("Insert error "+e.message.capitalize())
 
         self.closedb(conn)
 
     def connecttodb(self):
-        conn = sqlite3.connect('/home/nrv/PycharmProjects/listnerconnector/pnp.db')#ToDo change the file destination as common folder.
+        conn = sqlite3.connect('/home/nrv/PycharmProjects/listnerconnector/sqliteinterupt/pnp.db')
         cursor = conn.cursor()
         return  cursor,conn
 
@@ -64,6 +63,7 @@ class initdbclass():
 
     def getdata(self,keyval):
         cursor ,conn=self.connecttodb()
+
         data = (keyval,)
         cursor.execute('SELECT * FROM devicemetadata WHERE key=?', data)
         fetcheddata=cursor.fetchone()
@@ -72,15 +72,22 @@ class initdbclass():
 
     def getnodedata(self,keyval):
         cursor, conn = self.connecttodb()
+
         data = (keyval,)
         cursor.execute('SELECT * FROM deamonmetadata WHERE device=?', data)
         fetcheddata = cursor.fetchone()
         # return fetcheddata
         return fetcheddata
 
+    def updatedatadeamondata(self,cursor, column, data,deamon):
 
-
-
+        try:
+            cursor.execute(
+                "UPDATE deamonmetadata SET msgdate = ?,"+column+" = '"+data+"' WHERE device= ? ",
+                (time.time(),deamon,))
+            #print cursor
+        except Exception, e:
+            print e.message
 
 #cursor.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
 
