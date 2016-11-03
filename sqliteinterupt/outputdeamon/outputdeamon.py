@@ -28,7 +28,7 @@ def outputmainlink():#ToDo
                 time.sleep(2)
                 print "output Link Connection error occured"
             try:
-                outputdeamon.getdata()#ToDo
+                outputdeamon.senddata()#ToDo
                 print "outclient"
             except Exception,e:
                 print "output Server Link gone ",e
