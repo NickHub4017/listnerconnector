@@ -86,7 +86,7 @@ class initdbclass():
             cursor.execute(
                 "UPDATE deamonmetadata SET msgdate = ?,"+column+" = '"+data+"' WHERE device= ? ",
                 (time.time(),deamon,))
-            print cursor
+            #print cursor
         except Exception, e:
             print e.message
 

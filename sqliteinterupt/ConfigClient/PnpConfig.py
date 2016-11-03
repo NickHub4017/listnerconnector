@@ -8,24 +8,24 @@ db=initdbclass()
 
 def usage():
     print "-h help"
-    print "-conip  <ip> controldeamonIP"
-    print "-conport  <port> controldeamonPort"
-    print "-contype  <type> controldeamontype"
-    print "-contproto  <type> controldeamonprotocol"
-    print "-inpip  <ip> inputdeamonIP"
-    print "-inport  <port> inputdeamonPort"
-    print "-inptype  <type> inputdeamontype"
-    print "-inpproto  <type> inputdeamonprotocol"
-    print "-outip  <ip> outputdeamonIP"
-    print "-outport  <port> outputdeamonPort"
-    print "-outtype  <type> outputdeamontype"
-    print "-outproto  <type> outputdeamonprotocol"
-    print "-loadfile <filename>  loadconfigdata form file"
+    print "-conip=<ip> controldeamonIP"
+    print "-conport=<port> controldeamonPort"
+    print "-contype=<type> controldeamontype"
+    print "-contproto=<type> controldeamonprotocol"
+    print "-inpip=<ip> inputdeamonIP"
+    print "-inport=<port> inputdeamonPort"
+    print "-inptype=<type> inputdeamontype"
+    print "-inpproto=<type> inputdeamonprotocol"
+    print "-outip=<ip> outputdeamonIP"
+    print "-outport=<port> outputdeamonPort"
+    print "-outtype=<type> outputdeamontype"
+    print "-outproto=<type> outputdeamonprotocol"
+    print "-loadfile=<filename>  loadconfigdata form file"
     #ToDo add device paraemters and etc for the list
 
 try:
     opts, args = getopt.getopt(sys.argv[1:], "h ", ["help=", "conip=","conport=","contype=","inpip=","inport=","inptype=","outip=","outport=","outtype=","loadfile=","contproto=","inpproto=","outproto="])
-    print "Try"
+    #print "Try"
 except getopt.GetoptError:
     usage()
 
@@ -33,9 +33,9 @@ except getopt.GetoptError:
 
 
 def updatedata(arg,para):
-    print para
+    #print para
     arg=arg[2:]
-    print arg
+    #print arg
     cursor, conn = db.connecttodb()
     if(arg=="conip"):
         db.updatedatadeamondata(cursor,"ip",para,"cntrldeamon")
@@ -73,5 +73,5 @@ def updatedata(arg,para):
 
 
 for i in opts:
-    print i
+    #print i
     updatedata(i[0],i[1])
