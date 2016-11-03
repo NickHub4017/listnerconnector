@@ -2,7 +2,8 @@
 
 
 import socket
-from inputHandler import inputHandler
+from outputHandler import outputHandler
+
 class outputDeamonClient:
     def __init__(self,ipout="127.0.0.1",portout=9090):
         self.ip=ipout
@@ -23,26 +24,23 @@ class outputDeamonClient:
         self.port = portout
         return self;
 
-    def getdata(self):
+    def senddata(self):
         if (self.socket is not None):
             currentstr = ""
             # isbegin=False
 
-            self.handler = inputHandler()
+            self.handler = outputHandler()
             while (1):
                 try:
-                    print "wait for recv"
-                    inputmessage = str(self.socket.recv(self.buffersize))
-                    if(not inputmessage):
-                        break
-
-                    self.handler.writedata(inputmessage)
+                    print "wait for send"
+                    msg=self.handler.readdatapipe()
+                    self.socket.send(msg)
                 except Exception as a:
                     print a," error"
                     self.socket.close()
                     break
         else:
-            print "Sorry input deamon socket has an error"
+            print "Sorry output deamon socket has an error"
 
     def disconnect(self):
         if (self.socket is not None):
