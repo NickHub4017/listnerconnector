@@ -32,7 +32,7 @@ class outputDeamonClient:
             self.handler = outputHandler()
             while (1):
                 try:
-                    print "wait for send"
+                    #print "wait for send"
                     msg=self.handler.readdatapipe()
                     self.socket.send(msg)
                 except Exception as a:
