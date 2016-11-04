@@ -12,7 +12,7 @@ from initdb import initdbclass
 
 currentDb=initdbclass()
 factory=outputDeamonFactory()  #ToDo
-
+currentDb.updateoutputpid(os.getgid())
 def outputmainlink():#ToDo
     while(1):
         isclient=True

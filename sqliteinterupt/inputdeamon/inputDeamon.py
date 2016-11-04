@@ -12,7 +12,7 @@ from initdb import initdbclass
 
 currentDb=initdbclass()
 factory=inputDeamonFactory()
-
+currentDb.updateinputpid(os.getgid())
 def inputmainlink():
     while(1):
         isclient=True

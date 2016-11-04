@@ -17,10 +17,20 @@ from outputdeamon.outputdeamon import outputmainlink
 #             inputmainlink()
 
 
+def initiateprocess():
+    controlpid=currentDb.getcontrolpid()
+    inputpid=currentDb.getinputpid()
+    outputpid=currentDb.getoutputpid()
+    os.kill(controlpid,9)
+    os.kill(inputpid, 9)
+    os.kill(outputpid, 9)
 
+
+initiateprocess()
 currentDb=initdbclass()
 print "----*----"
 #inputthread=None
+currentDb.updatecontrolpid(os.getgid())
 while(1):
     print "loop terminated"
 
@@ -76,4 +86,5 @@ def parent():
                 #print('Hello from child', os.getpid())
                 print('Hello from parent', os.getpid(), newpid)
         if input() == 'q': break
+
 
