@@ -68,7 +68,6 @@ class initdbclass():
 
     def getdata(self,keyval):
         cursor ,conn=self.connecttodb()
-
         data = (keyval,)
         cursor.execute('SELECT * FROM devicemetadata WHERE key=?', data)
         fetcheddata=cursor.fetchone()
@@ -97,19 +96,19 @@ class initdbclass():
     def updateprocesspid(self, pid):
         self.updatedevicemetadata( "processputpid", pid, time.time())
 
-    def getinputpid(self, pid):
+    def getinputpid(self):
         #self.updatedevicemetadata(self, "inputpid", pid, time.time())
         return self.getdata("inputpid")
 
-    def getoutputpid(self, pid):
+    def getoutputpid(self):
         #self.updatedevicemetadata(self, "outputpid", pid, time.time())
         return self.getdata("outputpid")
 
-    def getcontrolpid(self, pid):
+    def getcontrolpid(self):
         #self.updatedevicemetadata(self, "controlutpid", pid, time.time())
         return self.getdata("controlutpid")
 
-    def getprocesspid(self, pid):
+    def getprocesspid(self):
         #self.updatedevicemetadata(self, "processputpid", pid, time.time())
         return self.getdata("processputpid")
 #cursor.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
