@@ -1,5 +1,6 @@
 import sqlite3
 import datetime;
+import time
 class initdbclass():
     def __init__(self):
         #print "iniialise database"
@@ -19,6 +20,10 @@ class initdbclass():
             cursor.execute("insert into devicemetadata (key) values ('sysname');")
             cursor.execute("insert into devicemetadata (key) values ('deviceparams');")
             cursor.execute("insert into devicemetadata (key) values ('progparams');")
+            cursor.execute("insert into devicemetadata (key) values ('inputpid');")
+            cursor.execute("insert into devicemetadata (key) values ('outputpid');")
+            cursor.execute("insert into devicemetadata (key) values ('controlutpid');")
+            cursor.execute("insert into devicemetadata (key) values ('processputpid');")
             #cursor.execute("insert into devicemetadata (key,value) values ('controlip','127.0.0.1');")
             #cursor.execute("insert into devicemetadata (key,value) values ('controlport',8080);")
 
@@ -63,7 +68,6 @@ class initdbclass():
 
     def getdata(self,keyval):
         cursor ,conn=self.connecttodb()
-
         data = (keyval,)
         cursor.execute('SELECT * FROM devicemetadata WHERE key=?', data)
         fetcheddata=cursor.fetchone()
@@ -72,23 +76,41 @@ class initdbclass():
 
     def getnodedata(self,keyval):
         cursor, conn = self.connecttodb()
-
         data = (keyval,)
         cursor.execute('SELECT * FROM deamonmetadata WHERE device=?', data)
         fetcheddata = cursor.fetchone()
         # return fetcheddata
         return fetcheddata
 
-    def updatedatadeamondata(self,cursor, column, data,deamon):
+    def updateinputpid(self,pid):
+        self.updatedevicemetadata( "inputpid", pid,time.time() )
 
-        try:
-            cursor.execute(
-                "UPDATE deamonmetadata SET msgdate = ?,"+column+" = '"+data+"' WHERE device= ? ",
-                (time.time(),deamon,))
-            #print cursor
-        except Exception, e:
-            print e.message
 
+    def updateoutputpid(self, pid):
+        self.updatedevicemetadata("outputpid", pid, time.time())
+
+
+    def updatecontrolpid(self, pid):
+        self.updatedevicemetadata( "controlutpid", pid, time.time())
+
+    def updateprocesspid(self, pid):
+        self.updatedevicemetadata( "processputpid", pid, time.time())
+
+    def getinputpid(self, pid):
+        #self.updatedevicemetadata(self, "inputpid", pid, time.time())
+        return self.getdata("inputpid")
+
+    def getoutputpid(self, pid):
+        #self.updatedevicemetadata(self, "outputpid", pid, time.time())
+        return self.getdata("outputpid")
+
+    def getcontrolpid(self, pid):
+        #self.updatedevicemetadata(self, "controlutpid", pid, time.time())
+        return self.getdata("controlutpid")
+
+    def getprocesspid(self, pid):
+        #self.updatedevicemetadata(self, "processputpid", pid, time.time())
+        return self.getdata("processputpid")
 #cursor.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
 
 
