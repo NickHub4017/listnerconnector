@@ -32,5 +32,5 @@ while(1):
     conn.send(json.dumps(data))  # echo
     time.sleep(5)
     data["cntrldeamon"]["port"]=8070
-    conn.send(json.dumps(data))  # echo
+    #conn.send(json.dumps(data))  # echo
     #conn.close()
