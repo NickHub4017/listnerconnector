@@ -15,6 +15,7 @@ from outputdeamon.outputdeamon import outputmainlink
 #      def run(self):
 #          if(self.deamonthreadtype==1):
 #             inputmainlink()
+
 currentDb=initdbclass()
 
 def initiateprocess():
@@ -22,11 +23,18 @@ def initiateprocess():
     inputpid=currentDb.getinputpid()
     outputpid=currentDb.getoutputpid()
     try:
-        os.kill(controlpid,9)
-        os.kill(inputpid, 9)
-        os.kill(outputpid, 9)
-    except:
-        print "Error occured"
+        os.kill(int(controlpid),9)
+    except Exception as e:
+        print "Kill Failed @ control ",e
+    try:
+        os.kill(int(inputpid), 9)
+    except Exception as e:
+        print "Kill Failed @ input " , e
+    try:
+        os.kill(int(outputpid), 9)
+    except Exception as e:
+        print "Kill Failed @ output " , e
+
 
 initiateprocess()
 
@@ -59,7 +67,7 @@ while(1):
                         print "Control Link Connection error occured"
                     try:
                         #inputthread.start()
-                        controllink.getdata()
+                        controllink.getdata()  #This will return only an error occurs in control stream OR UPDATE HAPPENS
                         print "get data returened"
                         time.sleep(1)
                         os.kill(newinputpid)
