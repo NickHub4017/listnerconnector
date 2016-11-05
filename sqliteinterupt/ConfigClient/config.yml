@@ -7,7 +7,7 @@ controldeamon:
 inputdeamon:
     ip: 127.0.0.1
     port: 8090
-    type: client                #clent and server are only allowed
+    type: server                #clent and server are only allowed
     protocol: tcp
     name: inpdeamon             #Do not chnage this name
 outputdeamon:
