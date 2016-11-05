@@ -42,7 +42,7 @@ class inputDeamonServer:
                         while (1):
                             try:
                                 print "wait for recv"
-                                inputmessage = str(self.socket.recv(self.buffersize))
+                                inputmessage = str(self.socket.recv(self.buffersize))  ##Check is it must be conn?
                                 if (not inputmessage):
                                     break
                                 self.handler.writedata(inputmessage)
