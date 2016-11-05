@@ -1,5 +1,6 @@
 #class outputDeamonFactory
 from outputDeamonClient import outputDeamonClient
+from outputDeamonServer import outputDeamonServer
 
 
 class outputDeamonFactory:
@@ -10,4 +11,4 @@ class outputDeamonFactory:
         if(type=="client"):
             return outputDeamonClient()
         elif(type=="server"):
-            return out
+            return outputDeamonServer()

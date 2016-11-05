@@ -28,7 +28,6 @@ class outputDeamonClient:
         if (self.socket is not None):
             currentstr = ""
             # isbegin=False
-
             self.handler = outputHandler()
             while (1):
                 try:

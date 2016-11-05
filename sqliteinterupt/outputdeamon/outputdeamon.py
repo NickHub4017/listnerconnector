@@ -20,7 +20,8 @@ def outputmainlink():#ToDo
         outpip=datarow[2]#ToDo
         outpport=datarow[3]#ToDo
         type=datarow[4]
-        print outpip," ",outpport," ",type#ToDo
+
+        print outpip," ",outpport," ",type," ",os.getpid()#ToDo
         if(type=="client"):
             outputdeamon = factory.getoutputDeamon("client").getconnection(outpip,outpport)#ToDo
 
@@ -38,8 +39,9 @@ def outputmainlink():#ToDo
             try:
                 outputdeamon=factory.getoutputDeamon("server").getconnection(outpip,outpport)#ToDo
                 outputdeamon.serve()#ToDo
+                break  #tOdO REMOVE
             except Exception as e:
                 print e
 
 
-outputmainlink()
+
