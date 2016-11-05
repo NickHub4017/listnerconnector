@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestclient.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml" afterPath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/pnp.db" afterPath="$PROJECT_DIR$/sqliteinterupt/pnp.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestserver.py" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestserver.py" />
     </list>
     <list id="14c6b354-0644-4937-8305-09a92abe676f" name="New changelist" comment="" />
     <ignored path="listnerconnector.iws" />
@@ -54,8 +50,8 @@
       <file leaf-file-name="inputDeamonServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+            <state relative-caret-position="180">
+              <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -636,7 +632,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478365015591</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Input Deamon's Bug fixed">
+      <created>1478367672088</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1478367672088</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -645,6 +648,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22905457" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.49730977" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.4980784" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33681074" sideWeight="0.7609531" order="9" side_tool="false" content_ui="tabs" />
@@ -654,7 +658,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39968896" sideWeight="0.49726775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -684,7 +687,8 @@
     <MESSAGE value="Add TestClient for OutPut Server" />
     <MESSAGE value="Change Control deamon to work with new changes." />
     <MESSAGE value="Finalize OutPuDEamon and change inputDeamondata" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalize OutPuDEamon and change inputDeamondata" />
+    <MESSAGE value="Input Deamon's Bug fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Input Deamon's Bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1054,8 +1058,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+        <state relative-caret-position="180">
+          <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

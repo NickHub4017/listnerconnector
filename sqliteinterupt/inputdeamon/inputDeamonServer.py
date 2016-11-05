@@ -45,8 +45,8 @@ class inputDeamonServer:
                         try:
                             print "wait for recv"
                             inputmessage = str(conn.recv(self.buffersize))  ##Check is it must be conn?
-                            #if (not inputmessage):
-                             #   break
+                            if (not inputmessage):
+                                break
                             #print inputmessage
                             self.handler.writedata(inputmessage)
                         except Exception as a:
