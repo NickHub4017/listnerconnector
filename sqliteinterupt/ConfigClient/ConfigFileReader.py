@@ -46,8 +46,8 @@ def readconfig(file):
     #print cfg
     return cfg
 
-def doFileConfig():
-    configs=readconfig("/home/nrv/PycharmProjects/listnerconnector/sqliteinterupt/ConfigClient/config.yml")
+def doFileConfig(file):
+    configs=readconfig(file)
     iscontrolchange=comparecntrlconfig(configs["controldeamon"])
     isinputchange =compareinputconfig(configs["inputdeamon"])
     isoutputchange =compareoutputconfig(configs["outputdeamon"])
@@ -59,4 +59,4 @@ def doFileConfig():
         db.updatefulldeamondata(configs["outputdeamon"], time.time())
     print iscontrolchange,isinputchange,isoutputchange
 
-doFileConfig()
+

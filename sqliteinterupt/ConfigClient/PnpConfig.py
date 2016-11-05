@@ -1,8 +1,10 @@
 import sys
 import getopt
 import sys
+import os
 sys.path.append('../')
 from initdb import initdbclass
+from ConfigFileReader import doFileConfig
 import ConfigFileReader
 db=initdbclass()
 
@@ -63,6 +65,10 @@ def updatedata(arg,para):
         db.updatedatadeamondata(cursor, "protocol", para, "oudeamon")
     elif (arg == "loadfile"):
         print "ToDo implement this part",para
+        if os.path.isfile(para):
+            doFileConfig(para)
+        else:
+            print "Sorry File not found"
     elif (arg == "h"):
         print usage()
     else:
