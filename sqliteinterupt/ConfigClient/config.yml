@@ -3,19 +3,19 @@ controldeamon:
     port: 8080
     type: client                #clent and server are only allowed
     protocol: tcp               #tcp udp websocket are only allowed
-    name: cntrldeamon
+    name: cntrldeamon           #Do not chnage this name
 inputdeamon:
     ip: 127.0.0.1
-    port: root
-    type: my secret password
-    protocol: write-math
-    name: inpdeamon
+    port: 8090
+    type: client                #clent and server are only allowed
+    protocol: tcp
+    name: inpdeamon             #Do not chnage this name
 outputdeamon:
-    ip: localhost
-    port: root
-    type: my secret password
-    protocol: write-math
-    name: oudeamon
+    ip: 127.0.0.1
+    port: 8100
+    type: client               #clent and server are only allowed
+    protocol: tcp       #tcp udp websocket are only allowed
+    name: oudeamon             #Do not chnage this name
 metadata:
     deviceparameters: -p 100 -q 10000
     programparameters: -t 100 -y 10000

@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/sqliteinterupt/pnp.db" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py" afterPath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/PnpConfig.py" afterPath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/PnpConfig.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml" afterPath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" afterPath="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
     </list>
     <list id="14c6b354-0644-4937-8305-09a92abe676f" name="New changelist" comment="" />
     <ignored path="listnerconnector.iws" />
@@ -26,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="controldeamon.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controldeamon.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="48" column="58" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="58" />
+            <state relative-caret-position="476">
+              <caret line="87" column="37" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -41,8 +42,8 @@
       <file leaf-file-name="ConfigFileReader.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="690">
+              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -50,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PnpConfig.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PnpConfig.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/PnpConfig.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+            <state relative-caret-position="-214">
+              <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -62,21 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="initdb.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/initdb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="1275">
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -158,10 +149,10 @@
         <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamon.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/initdb.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/PnpConfig.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/PnpConfig.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py" />
       </list>
     </option>
   </component>
@@ -196,7 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -331,6 +321,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -344,7 +335,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ConfigFileReader">
+  <component name="RunManager" selected="Python.controldeamon">
     <configuration default="false" name="thisdevicesender" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -379,23 +370,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="nextdevice" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="listnerconnector" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nextdevice.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="nextdevice2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -426,6 +400,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="listnerconnector" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="controldeamon" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sqliteinterupt" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="listnerconnector" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -567,17 +558,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.thisdevicesender" />
       <item index="1" class="java.lang.String" itemvalue="Python.datagenertor" />
-      <item index="2" class="java.lang.String" itemvalue="Python.nextdevice" />
-      <item index="3" class="java.lang.String" itemvalue="Python.nextdevice2" />
-      <item index="4" class="java.lang.String" itemvalue="Python.ConfigFileReader" />
+      <item index="2" class="java.lang.String" itemvalue="Python.nextdevice2" />
+      <item index="3" class="java.lang.String" itemvalue="Python.ConfigFileReader" />
+      <item index="4" class="java.lang.String" itemvalue="Python.controldeamon" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.ConfigFileReader" />
-        <item index="1" class="java.lang.String" itemvalue="Python.datagenertor" />
-        <item index="2" class="java.lang.String" itemvalue="Python.thisdevicesender" />
-        <item index="3" class="java.lang.String" itemvalue="Python.nextdevice2" />
-        <item index="4" class="java.lang.String" itemvalue="Python.nextdevice" />
+        <item index="0" class="java.lang.String" itemvalue="Python.controldeamon" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ConfigFileReader" />
+        <item index="2" class="java.lang.String" itemvalue="Python.datagenertor" />
+        <item index="3" class="java.lang.String" itemvalue="Python.thisdevicesender" />
+        <item index="4" class="java.lang.String" itemvalue="Python.nextdevice2" />
       </list>
     </recent_temporary>
   </component>
@@ -609,25 +600,39 @@
       <option name="project" value="LOCAL" />
       <updated>1478324025753</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Combine PnpConfig and ConfigFileReader">
+      <created>1478324278138</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1478324278138</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Complete ConfigFile parser adding with bug fixing in file path capture.">
+      <created>1478324916255</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1478324916255</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22905457" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.49730977" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.4980784" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33681074" sideWeight="0.7609531" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3219076" sideWeight="0.5019216" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3219076" sideWeight="0.5019216" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2876304" sideWeight="0.4788624" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29210135" sideWeight="0.4788624" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39968896" sideWeight="0.49726775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -650,7 +655,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'addsqlite' into addoutputDeamon&#10;--For get the missing features implemented in the sqlite database&#10;Conflicts:&#10;&#9;sqliteinterupt/initdb.py&#10;&#9;sqliteinterupt/pnp.db&#10;&#9;sqliteinterupt/testcases/testcontrolserver.py&#10;&#9;sqliteinterupt/testcases/testcontrolserver2.py&#10;" />
     <MESSAGE value="Done Config Parser and config file updater." />
-    <option name="LAST_COMMIT_MESSAGE" value="Done Config Parser and config file updater." />
+    <MESSAGE value="Combine PnpConfig and ConfigFileReader" />
+    <MESSAGE value="Complete ConfigFile parser adding with bug fixing in file path capture." />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete ConfigFile parser adding with bug fixing in file path capture." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -977,16 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="48" column="58" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -995,10 +992,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/initdb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="1275">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -1007,28 +1014,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="45">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/PnpConfig.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+        <state relative-caret-position="-214">
+          <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="87" column="37" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>

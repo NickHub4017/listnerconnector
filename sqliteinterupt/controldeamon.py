@@ -15,19 +15,21 @@ from outputdeamon.outputdeamon import outputmainlink
 #      def run(self):
 #          if(self.deamonthreadtype==1):
 #             inputmainlink()
-
+currentDb=initdbclass()
 
 def initiateprocess():
     controlpid=currentDb.getcontrolpid()
     inputpid=currentDb.getinputpid()
     outputpid=currentDb.getoutputpid()
-    os.kill(controlpid,9)
-    os.kill(inputpid, 9)
-    os.kill(outputpid, 9)
-
+    try:
+        os.kill(controlpid,9)
+        os.kill(inputpid, 9)
+        os.kill(outputpid, 9)
+    except:
+        print "Error occured"
 
 initiateprocess()
-currentDb=initdbclass()
+
 print "----*----"
 #inputthread=None
 currentDb.updatecontrolpid(os.getgid())
