@@ -9,20 +9,20 @@ import ConfigFileReader
 db=initdbclass()
 
 def usage():
-    print "-h help"
-    print "-conip=<ip> controldeamonIP"
-    print "-conport=<port> controldeamonPort"
-    print "-contype=<type> controldeamontype"
-    print "-contproto=<type> controldeamonprotocol"
-    print "-inpip=<ip> inputdeamonIP"
-    print "-inport=<port> inputdeamonPort"
-    print "-inptype=<type> inputdeamontype"
-    print "-inpproto=<type> inputdeamonprotocol"
-    print "-outip=<ip> outputdeamonIP"
-    print "-outport=<port> outputdeamonPort"
-    print "-outtype=<type> outputdeamontype"
-    print "-outproto=<type> outputdeamonprotocol"
-    print "-loadfile=<filename>  loadconfigdata form file"
+    print "--help"
+    print "--conip <ip> controldeamonIP"
+    print "--conport <port> controldeamonPort"
+    print "--contype <type> controldeamontype"
+    print "--contproto <type> controldeamonprotocol"
+    print "--inpip <ip> inputdeamonIP"
+    print "--inport <port> inputdeamonPort"
+    print "--inptype <type> inputdeamontype"
+    print "--inpproto <type> inputdeamonprotocol"
+    print "--outip <ip> outputdeamonIP"
+    print "--outport <port> outputdeamonPort"
+    print "--outtype <type> outputdeamontype"
+    print "--outproto <type> outputdeamonprotocol"
+    print "--loadfile <filename>  loadconfigdata form file"
     #ToDo add device paraemters and etc for the list
 
 try:
@@ -37,6 +37,8 @@ except getopt.GetoptError:
 def updatedata(arg,para):
     #print para
     arg=arg[2:]
+    smarg=arg[1:]
+    print arg,para
     #print arg
     cursor, conn = db.connecttodb()
     if(arg=="conip"):
@@ -64,12 +66,12 @@ def updatedata(arg,para):
     elif (arg == "outproto"):
         db.updatedatadeamondata(cursor, "protocol", para, "oudeamon")
     elif (arg == "loadfile"):
-        print "ToDo implement this part",para
+        #print "ToDo implement this part",para
         if os.path.isfile(para):
             doFileConfig(para)
         else:
             print "Sorry File not found"
-    elif (arg == "h"):
+    elif (smarg == "h"):
         print usage()
     else:
         print "Wrong Argument"

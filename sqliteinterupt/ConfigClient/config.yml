@@ -5,7 +5,7 @@ controldeamon:
     protocol: tcp               #tcp udp websocket are only allowed
     name: cntrldeamon
 inputdeamon:
-    ip: localhost
+    ip: 127.0.0.1
     port: root
     type: my secret password
     protocol: write-math

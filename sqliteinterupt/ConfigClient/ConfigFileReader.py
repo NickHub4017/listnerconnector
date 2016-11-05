@@ -47,6 +47,7 @@ def readconfig(file):
     return cfg
 
 def doFileConfig(file):
+    print "Begin File execute"
     configs=readconfig(file)
     iscontrolchange=comparecntrlconfig(configs["controldeamon"])
     isinputchange =compareinputconfig(configs["inputdeamon"])
