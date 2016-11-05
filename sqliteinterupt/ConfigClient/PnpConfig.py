@@ -3,7 +3,7 @@ import getopt
 import sys
 sys.path.append('../')
 from initdb import initdbclass
-
+import ConfigFileReader
 db=initdbclass()
 
 def usage():

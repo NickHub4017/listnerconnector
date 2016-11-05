@@ -1,0 +1,21 @@
+controldeamon:
+    ip: 127.0.0.1
+    port: 8080
+    type: client                #clent and server are only allowed
+    protocol: tcp               #tcp udp websocket are only allowed
+    name: cntrldeamon
+inputdeamon:
+    ip: localhost
+    port: root
+    type: my secret password
+    protocol: write-math
+    name: inpdeamon
+outputdeamon:
+    ip: localhost
+    port: root
+    type: my secret password
+    protocol: write-math
+    name: oudeamon
+metadata:
+    deviceparameters: -p 100 -q 10000
+    programparameters: -t 100 -y 10000
