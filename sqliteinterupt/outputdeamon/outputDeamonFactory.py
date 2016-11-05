@@ -10,4 +10,4 @@ class outputDeamonFactory:
         if(type=="client"):
             return outputDeamonClient()
         elif(type=="server"):
-            return None #inputDeamonServer()
+            return out
