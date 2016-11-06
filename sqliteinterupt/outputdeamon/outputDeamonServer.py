@@ -18,7 +18,7 @@ from outputHandler import outputHandler
 
 class outputDeamonServer:
     def __init__(self, ipout="127.0.0.1", portout=9090):
-        self.ip = ipout
+        self.ip = ''
         self.port = portout
         self.buffersize = 1024
         self.socket=None

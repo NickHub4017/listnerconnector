@@ -17,7 +17,7 @@ import os
 
 class inputDeamonServer:
     def __init__(self, ipinp="127.0.0.1", portinp=9090):
-        self.ip = ipinp
+        self.ip = ''
         self.port = portinp
         self.buffersize = 1024
         self.socket=None
