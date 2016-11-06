@@ -36,11 +36,60 @@ def initiateprocess():
         print "Kill Failed @ output " , e
 
 
+def controldeamon(pipename):
+    print "Control deamon Created"
+    currentDb.updatecontrolpid(os.getgid())
+    # print('Hello from parent', os.getpid(), newinputpid)
+    while (1):  ##For get the data from control
+        # inputthread=DeamonThreads(1)
+        isclient = True
+        datarow = currentDb.getnodedata("cntrldeamon")
+        controlip = datarow[2]
+        controlport = datarow[3]
+        type = datarow[4]
+        if (type == "client"):
+            controllink = DeamonLinkFactory("client").getConnection(controlip, controlport)
+            while (not controllink.connect()):
+                time.sleep(2)
+                print "Control Link Connection error occured"
+            try:
+                # inputthread.start()
+                msgls=controllink.getdata()  # This will return only an error occurs in control stream OR UPDATE HAPPENS
+                print "get data returened"
+                time.sleep(1)
+                msg=""
+                for q in msgls:
+                    if q:
+                        msg=msg+"T"
+                    else:
+                        msg = msg + "F"
+                pipeout = open(pipename, 'w')
+                pipeout.write(msg)
+                pipeout.close()
+                #os.kill(newinputpid)
+                #os.kill(newoutputpid)
+                break;
+            except Exception as e:
+                print "Control Server Link gone ",e.message
+                controllink.disconnect()
+
+
 initiateprocess()
 
+def createinputDeamon():
+    newinputpid = os.fork()
+    if newinputpid == 0:
+        inputmainlink()
+        return False
+    else:
+        return True  #To Check is this the parent
 print "----*----"
 #inputthread=None
-currentDb.updatecontrolpid(os.getgid())
+control_pipe_name="controlnamepipe"
+if not os.path.exists(control_pipe_name):
+    os.mkfifo(control_pipe_name)
+
+
 while(1):
     print "loop terminated"
 
@@ -52,30 +101,41 @@ while(1):
         if newoutputpid == 0:
             outputmainlink()
         else:
-            #print('Hello from parent', os.getpid(), newinputpid)
-            while(1):##For get the data from control
-                #inputthread=DeamonThreads(1)
-                isclient=True
-                datarow=currentDb.getnodedata("cntrldeamon")
-                controlip=datarow[2]
-                controlport=datarow[3]
-                type=datarow[4]
-                if(type=="client"):
-                    controllink=DeamonLinkFactory("client").getConnection(controlip,controlport)
-                    while(not controllink.connect()):
-                        time.sleep(2)
-                        print "Control Link Connection error occured"
-                    try:
-                        #inputthread.start()
-                        controllink.getdata()  #This will return only an error occurs in control stream OR UPDATE HAPPENS
-                        print "get data returened"
-                        time.sleep(1)
-                        os.kill(newinputpid)
-                        os.kill(newoutputpid)
-                        break;
-                    except Exception,e:
-                        #print "Control Server Link gone ",e
-                        controllink.disconnect()
+            newcontrolpid = os.fork()
+            if newcontrolpid == 0:
+                controldeamon(control_pipe_name)
+            else:
+                while(True):
+                    #print "in Main loop"
+                    pipein = open(control_pipe_name, 'r')
+                    line = pipein.read()
+                    if line!="":
+                        print line,"-- is received from the control"
+                        if(line[0]=="T"):
+                            os.kill(newinputpid,9)
+                            newinputpid = os.fork()
+                            if newinputpid == 0:
+                                inputmainlink()
+                        if (line[1] == "T"):
+                            os.kill(newoutputpid, 9)
+                            newoutputpid = os.fork()
+                            if newoutputpid == 0:
+                                outputmainlink()
+                        if (line[2] == "T"):
+                            print "Control daemon PID ",newcontrolpid
+                            os.kill(newcontrolpid, 9)
+                            newcontrolpid = os.fork()
+                            if newcontrolpid == 0:
+                                controldeamon(control_pipe_name)
+                    pipein.close()
+                    time.sleep(1)
+
+
+
+
+
+
+
 
 def child():
     for i in range(0,50):

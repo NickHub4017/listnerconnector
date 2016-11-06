@@ -24,13 +24,15 @@ class ControlHandler:
         controlmessagesysname = controlmsgjson["sysname"]
         controlmessageprogramproperties = controlmsgjson["programproperties"]
         controlmessagedeviceproperties = controlmsgjson["deviceproperties"]
-        self.submitdatatodatabase(controlmessagetimestamp,controlmessagefromip,controlmessagesysid,controlmessagesysname,controlmessageprogramproperties,controlmessagedeviceproperties,inputdeamonprop,outputdeamonprop,cntrldeamonprop)
+        resdata=self.submitdatatodatabase(controlmessagetimestamp,controlmessagefromip,controlmessagesysid,controlmessagesysname,controlmessageprogramproperties,controlmessagedeviceproperties,inputdeamonprop,outputdeamonprop,cntrldeamonprop)
+        return resdata
 
 
     def submitdatatodatabase(self,controlmessagetimestamp,controlmessagefromip,controlmessagesysid,controlmessagesysname,controlmessageprogramproperties,controlmessagedeviceproperties,inputdeamonprop,outputdeamonprop,cntrldeamonprop):
-        print "todo implement the db submit code"
+        #print "todo implement the db submit code"
         self.db=initdbclass()
         #print "---------------------1------------------"
+
         self.db.updatedevicemetadata("subdate",controlmessagetimestamp,time.time())
         self.db.updatedevicemetadata("updatefrom", controlmessagefromip, time.time())
         self.db.updatedevicemetadata("sysid", controlmessagesysid, time.time())#ToDo add this to the table
@@ -38,12 +40,22 @@ class ControlHandler:
         self.db.updatedevicemetadata("progparams", controlmessageprogramproperties, time.time())
         self.db.updatedevicemetadata("deviceparams", controlmessagedeviceproperties, time.time())
         #print "---------------------2------------------"
-        self.db.updatefulldeamondata(inputdeamonprop,time.time())
+        updatelist=[False,False,False,False]  #input output control program
+        inprow = self.db.getnodedata("inpdeamon")
+        if (inprow[2]!=inputdeamonprop["ip"] or inprow[3]!=inputdeamonprop["port"] or inprow[4]!=inputdeamonprop["type"] or inprow[5]!=inputdeamonprop["protocol"]):
+            self.db.updatefulldeamondata(inputdeamonprop,time.time())
+            updatelist[0]=True
         #print "---------------------3------------------"
-        self.db.updatefulldeamondata(outputdeamonprop, time.time())
-        print "---------------------4------------------",cntrldeamonprop["port"]
-        self.db.updatefulldeamondata(cntrldeamonprop, time.time())
+        outprow = self.db.getnodedata("oudeamon")
+        if (outprow[2] != outputdeamonprop["ip"] or outprow[3] != outputdeamonprop["port"] or outprow[4] != outputdeamonprop["type"] or outprow[5] != outputdeamonprop["protocol"]):
+            self.db.updatefulldeamondata(outputdeamonprop, time.time())
+            updatelist[1] = True
+        #print "---------------------4------------------",cntrldeamonprop["port"]
+        controlprow = self.db.getnodedata("cntrldeamon")
+        if (controlprow[2] != cntrldeamonprop["ip"] or controlprow[3] != cntrldeamonprop["port"] or controlprow[4] !=cntrldeamonprop["type"] or controlprow[5] != cntrldeamonprop["protocol"]):
+            self.db.updatefulldeamondata(cntrldeamonprop, time.time())
+            updatelist[2] = True
         #print "---------------------5------------------"
-
+        return updatelist
 
 

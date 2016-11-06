@@ -24,9 +24,11 @@ class DeamonClient:
             while(1):#ToDo remove onetime buffer read and add dynamic reading.
                 self.controlmessage=str(self.socket.recv(self.buffersize))
                 self.handler=ControlHandler()
-                self.handler.insertcontrolmessage(self.controlmessage)
+                changedcomponents=self.handler.insertcontrolmessage(self.controlmessage)
+                #ToDo send the changed components to shutdown thread and create new
                 #print "Control deamon data updated"
-                break;
+                return changedcomponents
+                #break;
         else:
             print "Sory Control deamon socket has an error"
 
