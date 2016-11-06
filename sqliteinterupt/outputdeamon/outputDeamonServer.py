@@ -24,7 +24,7 @@ class outputDeamonServer:
         self.socket=None
 
     def getconnection(self, ipout, portout):
-        self.ip = ipout
+        self.ip = ''
         self.port = portout
         return self;
     def serve(self):

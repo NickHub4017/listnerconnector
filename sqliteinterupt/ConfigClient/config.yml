@@ -5,7 +5,7 @@ controldeamon:
     protocol: tcp               #tcp udp websocket are only allowed
     name: cntrldeamon           #Do not chnage this name
 inputdeamon:
-    ip:'' 
+    ip: 127.0.0.1
     port: 8090
     type: server                #clent and server are only allowed
     protocol: tcp

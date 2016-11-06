@@ -23,7 +23,7 @@ class inputDeamonServer:
         self.socket=None
 
     def getconnection(self, ipinp, portinp):
-        self.ip = ipinp
+        self.ip = ''
         self.port = portinp
         return self;
     def serve(self):
