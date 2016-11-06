@@ -1,7 +1,7 @@
 import os
 class outputHandler:
     def __init__(self,outpipename="outpipe"):
-        self.pipename="/home/nrv/PycharmProjects/listnerconnector/"+outpipename
+        self.pipename="/tmp/"+outpipename
         #print self.pipename
         try:
             #print "init"

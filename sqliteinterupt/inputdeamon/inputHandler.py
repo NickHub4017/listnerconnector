@@ -1,7 +1,7 @@
 import os
 class inputHandler:
     def __init__(self,inppipename="inppipe"):
-        self.pipename="/home/nrv/PycharmProjects/listnerconnector/"+inppipename
+        self.pipename="/tmp/"+inppipename
         #print self.pipename
         try:
             #print "init"
