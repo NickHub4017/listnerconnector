@@ -29,8 +29,10 @@ while(1):
     data["programproperties"]="-p 100 -q 1000"
     data["deviceproperties"]="-p 1500 -q 150"
     print data['inpdeamon']
+    time.sleep(30)
     conn.send(json.dumps(data))  # echo
-    time.sleep(10)
+
     data["cntrldeamon"]["port"]=8080
+
     #conn.send(json.dumps(data))  # echo
     #conn.close()

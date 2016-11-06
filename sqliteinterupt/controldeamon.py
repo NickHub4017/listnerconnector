@@ -55,7 +55,7 @@ def controldeamon(pipename):
             try:
                 # inputthread.start()
                 msgls=controllink.getdata()  # This will return only an error occurs in control stream OR UPDATE HAPPENS
-                print "get data returened"
+                print  "get data returened ",os.getpid()
                 time.sleep(1)
                 msg=""
                 for q in msgls:
@@ -94,14 +94,18 @@ while(1):
     print "loop terminated"
 
     newinputpid = os.fork()
+    currentDb.updateinputpid(newinputpid)
     if newinputpid == 0:
         inputmainlink()
+
     else:
         newoutputpid = os.fork()
+        currentDb.updateoutputpid(newoutputpid)
         if newoutputpid == 0:
             outputmainlink()
         else:
             newcontrolpid = os.fork()
+            currentDb.updatecontrolpid(newcontrolpid)
             if newcontrolpid == 0:
                 controldeamon(control_pipe_name)
             else:
@@ -114,17 +118,20 @@ while(1):
                         if(line[0]=="T"):
                             os.kill(newinputpid,9)
                             newinputpid = os.fork()
+                            currentDb.updateinputpid(newinputpid)
                             if newinputpid == 0:
                                 inputmainlink()
                         if (line[1] == "T"):
                             os.kill(newoutputpid, 9)
                             newoutputpid = os.fork()
+                            currentDb.updateoutputpid(newoutputpid)
                             if newoutputpid == 0:
                                 outputmainlink()
                         if (line[2] == "T"):
                             print "Control daemon PID ",newcontrolpid
                             os.kill(newcontrolpid, 9)
                             newcontrolpid = os.fork()
+                            currentDb.updatecontrolpid(newcontrolpid)
                             if newcontrolpid == 0:
                                 controldeamon(control_pipe_name)
                     pipein.close()
