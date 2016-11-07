@@ -38,6 +38,11 @@ class outputDeamonServer:
                     conn, addr = s.accept()
                 except Exception as e:
                     print "@ accept",e
+                    s.shutdown()
+                    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                    s.bind((self.ip, self.port))
+                    s.listen(1)
+                    self.socket = s
                 print 'Connection address outputdeamon server:', addr
                 #while(1):
                 print "in main Loop"

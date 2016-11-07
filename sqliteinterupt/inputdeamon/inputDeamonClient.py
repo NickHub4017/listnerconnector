@@ -29,11 +29,20 @@ class inputDeamonClient:
             # isbegin=False
 
             self.handler = inputHandler()
+            errorcount=0
             while (1):
                 try:
                     print "wait for recv"
+                    errorcount=errorcount+1
                     inputmessage = str(self.socket.recv(self.buffersize))
                     if(not inputmessage):
+                        if(errorcount>10000):
+                            try:
+                                self.socket.send("Check")
+                                errorcount=0
+                            except:
+                                print "Disconnected input deamon"
+                                break
                         continue
 
                     self.handler.writedata(inputmessage)
