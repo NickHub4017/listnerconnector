@@ -117,7 +117,7 @@ class initdbclass():
         print "--------------------Deamons  METADATA-----------\n"
         cursor, conn = self.connecttodb()
         cursor.execute('SELECT * FROM deamonmetadata')
-        fetcheddata = cursor.fetchone()
+        fetcheddata = cursor.fetchall()
         # return fetcheddata
         #return fetcheddata
         print fetcheddata
@@ -126,7 +126,7 @@ class initdbclass():
         print "--------------------devicemetadata  METADATA-----------\n"
         cursor, conn = self.connecttodb()
         cursor.execute('SELECT * FROM devicemetadata')
-        fetcheddata = cursor.fetchone()
+        fetcheddata = cursor.fetchall()
         # return fetcheddata
         print fetcheddata
 
