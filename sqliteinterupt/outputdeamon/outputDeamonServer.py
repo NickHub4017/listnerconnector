@@ -32,12 +32,12 @@ class outputDeamonServer:
         s.bind((self.ip, self.port))
         s.listen(1)
         self.socket =s
-        try:
-            conn, addr = s.accept()
-        except Exception as e:
-            print e
         while(1):
             try:
+                try:
+                    conn, addr = s.accept()
+                except Exception as e:
+                    print "@ accept",e
                 print 'Connection address outputdeamon server:', addr
                 #while(1):
                 print "in main Loop"
@@ -54,7 +54,7 @@ class outputDeamonServer:
                             print "send Done"
                         except Exception as a:
                             print a, " error"
-                            self.socket.close()
+                            conn.close()
                             break
                 else:
                     print "Sorry input deamon socket has an error"

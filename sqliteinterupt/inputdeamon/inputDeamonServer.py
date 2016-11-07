@@ -33,7 +33,7 @@ class inputDeamonServer:
         try:
             conn, addr = s.accept()
         except Exception as e:
-            print
+            print e
         while(1):
             try:
                 print 'Connection address:', addr
@@ -54,6 +54,7 @@ class inputDeamonServer:
                         except Exception as a:
                             print a, " error"
                             #self.socket.close()
+                            return
                             break
                 else:
                     print "Sorry input deamon socket has an error"
