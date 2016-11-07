@@ -30,10 +30,12 @@ class inputDeamonServer:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.bind((self.ip, self.port))
         s.listen(1)
-
+        try:
+            conn, addr = s.accept()
+        except Exception as e:
+            print
         while(1):
             try:
-                conn, addr = s.accept()
                 print 'Connection address:', addr
                 #while(1):
                 if (True):

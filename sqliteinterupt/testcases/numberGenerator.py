@@ -3,8 +3,8 @@ import os
 import time
 
 while True:
-    inpath = "/home/nrv/PycharmProjects/listnerconnector/inppipe"
-    outpath="/home/nrv/PycharmProjects/listnerconnector/outpipe"
+    inpath = "/tmp/inppipe"
+    outpath="/tmp/outpipe"
     try:
         os.mkfifo(inpath)
     except:
@@ -14,10 +14,12 @@ while True:
     except:
         print "file is exsist"
 
-    fifo = open(outpath, 'w')
+
     for i in range(0, 150):
+        fifo = open(outpath, 'w')
         print "send", str(i)
         fifo.write("Message from the sender! ")
+        fifo.close()
         time.sleep(1)
-    fifo.close()
+
 
