@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml" afterPath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputHandler.py" afterPath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputHandler.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" afterPath="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
     </list>
     <list id="14c6b354-0644-4937-8305-09a92abe676f" name="New changelist" comment="" />
     <ignored path="listnerconnector.iws" />
@@ -28,11 +25,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="numberGenerator.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="controldeamon.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="numberGenerator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            <state relative-caret-position="135">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -88,12 +97,12 @@
         <option value="$PROJECT_DIR$/sqliteinterupt/debuggingprocess.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/debugdatabase.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/initdb.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputHandler.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/testcases/inputpipetest.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
       </list>
     </option>
   </component>
@@ -653,7 +662,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478509210654</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add debug code. (For IOT device clone and TEST)">
+      <created>1478509970032</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1478509970032</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -706,7 +722,8 @@
     <MESSAGE value="Make the namedpipe connection universal." />
     <MESSAGE value="Servers change to work for all interfaces." />
     <MESSAGE value="Add database debug." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add database debug." />
+    <MESSAGE value="Add debug code. (For IOT device clone and TEST)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add debug code. (For IOT device clone and TEST)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -948,6 +965,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -993,16 +1011,6 @@
         <state relative-caret-position="255">
           <caret line="19" column="104" selection-start-line="19" selection-start-column="104" selection-end-line="19" selection-end-column="104" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="96" column="13" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1088,9 +1096,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        <state relative-caret-position="135">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="76" column="1" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

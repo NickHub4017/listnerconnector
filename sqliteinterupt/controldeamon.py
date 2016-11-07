@@ -74,7 +74,7 @@ def controldeamon(pipename):
                 controllink.disconnect()
 
 
-initiateprocess()
+#initiateprocess()
 
 def createinputDeamon():
     newinputpid = os.fork()
