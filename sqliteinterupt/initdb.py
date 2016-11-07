@@ -111,6 +111,23 @@ class initdbclass():
     def getprocesspid(self):
         #self.updatedevicemetadata(self, "processputpid", pid, time.time())
         return self.getdata("processputpid")
-#cursor.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
+    #cursor.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
+
+    def getAlldebug(self):
+        print "--------------------Deamons  METADATA-----------\n"
+        cursor, conn = self.connecttodb()
+        cursor.execute('SELECT * FROM deamonmetadata')
+        fetcheddata = cursor.fetchone()
+        # return fetcheddata
+        #return fetcheddata
+        print fetcheddata
+        self.closedb(conn);
+
+        print "--------------------devicemetadata  METADATA-----------\n"
+        cursor, conn = self.connecttodb()
+        cursor.execute('SELECT * FROM devicemetadata')
+        fetcheddata = cursor.fetchone()
+        # return fetcheddata
+        print fetcheddata
 
 

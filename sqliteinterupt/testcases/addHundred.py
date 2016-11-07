@@ -14,10 +14,12 @@ while True:
     except:
         print "file is exsist"
 
-    fifoout = open(outpath, 'w')
+    print "Wait for fifo read"
     fifoin= open(inpath, 'r')
     msg=fifoin.read()
     fifoin.close()
+    print msg
+    fifoout = open(outpath, 'w')
     fifoout.write(msg+"100")
     fifoout.close()
 
