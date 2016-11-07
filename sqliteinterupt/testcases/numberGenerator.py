@@ -18,7 +18,7 @@ while True:
     for i in range(0, 150):
         fifo = open(outpath, 'w')
         print "send", str(i)
-        fifo.write("Message from the sender! ")
+        fifo.write("Message from the sender! :- "+str(i)+" <-> ")
         fifo.close()
         time.sleep(1)
 

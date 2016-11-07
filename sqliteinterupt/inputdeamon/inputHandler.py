@@ -15,6 +15,7 @@ class inputHandler:
         try:
             #print msg, "wait for pipout"
             self.pipeout = open(self.pipename, 'w')
+            print msg
             self.pipeout.write(msg)
             self.pipeout.close()
         except Exception as e:

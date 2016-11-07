@@ -1,18 +1,18 @@
 controldeamon:
-    ip: 127.0.0.1
+    ip: 192.34.63.88
     port: 8080
     type: client                #clent and server are only allowed
     protocol: tcp               #tcp udp websocket are only allowed
     name: cntrldeamon           #Do not chnage this name
 inputdeamon:
-    ip: 127.0.0.1
-    port: 8090
-    type: server                #clent and server are only allowed
+    ip: 192.34.63.88
+    port: 8100
+    type: client            #clent and server are only allowed
     protocol: tcp
     name: inpdeamon             #Do not chnage this name
 outputdeamon:
     ip: 127.0.0.1
-    port: 8100
+    port: 8120
     type: server               #clent and server are only allowed
     protocol: tcp       #tcp udp websocket are only allowed
     name: oudeamon             #Do not chnage this name
