@@ -32,6 +32,7 @@ class inputDeamonClientUDP:
         return self;
 
     def getdata(self):
+        self.sock.sendto("sending", self.server_address)
         logging.debug(
             'input client udp getdata with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
         if (self.sock is not None):

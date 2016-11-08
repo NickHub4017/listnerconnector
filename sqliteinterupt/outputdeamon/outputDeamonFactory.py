@@ -2,6 +2,7 @@
 from outputDeamonClient import outputDeamonClient
 from outputDeamonServer import outputDeamonServer
 from outputDeamonUDPClient import outputDeamonClientUDP
+from outputDaemonUDPServer import outputDeamonServerUDP
 
 
 class outputDeamonFactory:
@@ -15,3 +16,5 @@ class outputDeamonFactory:
             return outputDeamonServer()
         elif (type == "client" and protocol == "udp"):
             return outputDeamonClientUDP()
+        elif (type == "server" and protocol == "udp"):
+            return outputDeamonServerUDP()
