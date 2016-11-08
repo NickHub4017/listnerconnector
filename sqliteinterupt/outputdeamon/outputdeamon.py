@@ -20,9 +20,9 @@ def outputmainlink():#ToDo
         outpip=datarow[2]#ToDo
         outpport=datarow[3]#ToDo
         type=datarow[4]
-
+        protocol = datarow[5]
         print outpip," ",outpport," ",type," ",os.getpid()#ToDo
-        if(type=="client"):
+        if(type=="client" and protocol=="tcp"):
             outputdeamon = factory.getoutputDeamon("client").getconnection(outpip,outpport)#ToDo
 
             while(not outputdeamon.connect()):#ToDo
@@ -35,7 +35,7 @@ def outputmainlink():#ToDo
                 print "output Server Link gone ",e
                 outputdeamon.disconnect()#ToDo
 
-        elif(type=="server"):
+        elif(type=="server" and protocol=="tcp"):
             try:
                 outputdeamon=factory.getoutputDeamon("server").getconnection(outpip,outpport)#ToDo
                 outputdeamon.serve()#ToDo
@@ -43,5 +43,17 @@ def outputmainlink():#ToDo
             except Exception as e:
                 print e
 
+        elif(type == "client" and protocol == "udp"):
+            outputdeamon = factory.getoutputDeamon("client","udp").getconnection(outpip, outpport)  # ToDo
+
+            while (not outputdeamon.connect()):  # ToDo
+                time.sleep(2)
+                print "output Link Connection error occured UDP"
+            try:
+                outputdeamon.senddata()  # ToDo
+                print "outclient"
+            except Exception, e:
+                print "output Server Link gone ", e
+                outputdeamon.disconnect()  # ToDo
 
 

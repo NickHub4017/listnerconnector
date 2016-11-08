@@ -13,6 +13,7 @@ class outputDeamonClientUDP:
     def connect(self):
         try:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
             #self.socket.settimeout(5)  #ToDo enable timeout
             #self.socket.connect((self.ip, self.port))
             return True
@@ -43,6 +44,8 @@ class outputDeamonClientUDP:
 
     def disconnect(self):
         if (self.sock is not None):
-            #self.socket.close()
+            self.sock.close()
             self.sock = None
+
+
 
