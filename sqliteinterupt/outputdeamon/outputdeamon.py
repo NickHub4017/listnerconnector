@@ -21,6 +21,8 @@ def outputmainlink():#ToDo
         outpport=datarow[3]#ToDo
         type=datarow[4]
         protocol = datarow[5]
+        print protocol,"-----"
+        time.sleep(10)
         print outpip," ",outpport," ",type," ",os.getpid()#ToDo
         if(type=="client" and protocol=="tcp"):
             outputdeamon = factory.getoutputDeamon("client").getconnection(outpip,outpport)#ToDo
