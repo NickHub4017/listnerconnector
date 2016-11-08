@@ -58,7 +58,7 @@ def outputmainlink():#ToDo
                 print "output Server Link gone ", e
                 outputdeamon.disconnect()  # ToDo
 
-        elif (type == "server" and protocol == "tcp"):
+        elif (type == "server" and protocol == "udp"):
             try:
                 outputdeamon = factory.getoutputDeamon("server","udp").getconnection(outpip, outpport)  # ToDo
                 outputdeamon.serve()  # ToDo

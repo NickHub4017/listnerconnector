@@ -53,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+              <caret line="60" column="51" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
               <folding>
                 <element signature="e#22#73#0" expanded="true" />
               </folding>
@@ -836,7 +836,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478587708461</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="output Daemon link Added (UDP) with UDPServer">
+      <created>1478588493039</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1478588493039</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1303,7 +1310,7 @@
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <caret line="60" column="51" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
           <folding>
             <element signature="e#22#73#0" expanded="true" />
           </folding>
