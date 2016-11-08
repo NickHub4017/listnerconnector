@@ -50,6 +50,10 @@ class outputDeamonServerUDP:
                 except Exception as e:
                     print "@ accept",e
                     logging.debug('52 output server udp serve first while loop (TRY/EXCEPT)'+e.message)
+                    self.sock.close()
+                    self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                    self.sock.bind(self.server_address)
+
                     #s.shutdown()
                     #s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     #s.bind((self.ip, self.port))
