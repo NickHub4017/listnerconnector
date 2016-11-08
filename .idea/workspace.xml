@@ -52,8 +52,8 @@
       <file leaf-file-name="outputDaemonUDPServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+            <state relative-caret-position="161">
+              <caret line="79" column="76" selection-start-line="79" selection-start-column="76" selection-end-line="79" selection-end-column="76" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -835,7 +835,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478590099648</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="output Daemon link Added (UDP) with UDPServer-- Bug fixed">
+      <created>1478590205230</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1478590205230</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1302,8 +1309,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+        <state relative-caret-position="161">
+          <caret line="79" column="76" selection-start-line="79" selection-start-column="76" selection-end-line="79" selection-end-column="76" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
