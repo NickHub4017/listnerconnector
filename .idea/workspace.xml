@@ -52,8 +52,8 @@
       <file leaf-file-name="outputDaemonUDPServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+            <state relative-caret-position="199">
+              <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -904,7 +904,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478602701310</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Add threading for handling">
+      <created>1478603346122</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1478603346122</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -943,7 +950,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'addoutputDeamon'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;sqliteinterupt/controldeamon.py&#10;&#9;sqliteinterupt/outputdeamon/outputDeamonFactory.py&#10;&#9;sqliteinterupt/pnp.db&#10;" />
     <MESSAGE value="Change OutputDeamons, Add OutputDeamon Server" />
     <MESSAGE value="Add TestClient for OutPut Server" />
     <MESSAGE value="Change Control deamon to work with new changes." />
@@ -968,7 +974,8 @@
     <MESSAGE value="output Daemon link Added (UDP) with UDPServer-- Bug fixed in message send" />
     <MESSAGE value="output Daemon link Added (UDP) with UDPServer-- Bug fixed in message send -- Restore Point (FOR THREADING)" />
     <MESSAGE value="Seperating Data handling function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Seperating Data handling function" />
+    <MESSAGE value="Add threading for handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add threading for handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1372,8 +1379,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="64" column="29" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
+        <state relative-caret-position="199">
+          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

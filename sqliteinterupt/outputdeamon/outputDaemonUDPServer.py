@@ -91,7 +91,7 @@ class outputDeamonServerUDP:
                     sent = 0
                     while (ln > 0):
                         self.sock.sendto(msg[sent:min(sent + 10000, ln)], address)
-                        print msg[sent:min(sent + 10000, ln - sent)]
+                        #print msg[sent:min(sent + 10000, ln - sent)]
                         sent = sent + 10000
                         ln = ln - 10000
                     # time.sleep(1)
