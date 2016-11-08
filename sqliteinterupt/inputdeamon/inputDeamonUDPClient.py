@@ -16,7 +16,7 @@ class inputDeamonClientUDP:
     def connect(self):
         try:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            #self.sock.settimeout(5)
+            self.sock.settimeout(5)
             self.server_address = (self.ip, self.port)
             logging.debug('input client udp connect (TRY) with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
             return True
@@ -33,6 +33,7 @@ class inputDeamonClientUDP:
 
     def getdata(self):
         self.sock.sendto("sending", self.server_address)
+
         logging.debug(
             'input client udp getdata with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
         if (self.sock is not None):
