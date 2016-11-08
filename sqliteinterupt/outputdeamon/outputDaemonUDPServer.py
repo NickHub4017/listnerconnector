@@ -74,6 +74,7 @@ class outputDeamonServerUDP:
                         try:
                             logging.debug('71 output server udp serve first while loop (TRY) Socket not None While (TRY)')
                             msg = self.handler.readdatapipe()
+                            print len(msg)
                             self.sock.sendto(msg, address)
                             #time.sleep(1)
                             print "send Done"

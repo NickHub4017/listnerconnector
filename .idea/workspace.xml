@@ -4,7 +4,6 @@
     <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py" />
     </list>
     <list id="14c6b354-0644-4937-8305-09a92abe676f" name="New changelist" comment="" />
     <ignored path="listnerconnector.iws" />
@@ -38,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="outputdeamon.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="outputdeamon.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="230">
+              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
               <folding>
                 <element signature="e#22#73#0" expanded="true" />
               </folding>
@@ -50,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="outputDaemonUDPServer.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="outputDaemonUDPServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+            <state relative-caret-position="251">
+              <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -135,8 +134,8 @@
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonFactory.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonUDPClient.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" />
       </list>
     </option>
   </component>
@@ -829,7 +828,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478589440817</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="output Daemon link Added (UDP) with UDPServer-- Bug fixed">
+      <created>1478590099648</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1478590099648</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1284,22 +1290,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="56" column="33" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+        <state relative-caret-position="230">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#22#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py">
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="251">
+          <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
           <folding>
-            <element signature="e#22#73#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
