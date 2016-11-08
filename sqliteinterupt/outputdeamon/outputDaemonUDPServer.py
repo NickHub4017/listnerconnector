@@ -59,41 +59,7 @@ class outputDeamonServerUDP:
                     #s.bind((self.ip, self.port))
                     #s.listen(1)
                     #self.sock = s
-                print 'Connection address outputdeamon server udp :',address
-                logging.debug('59 output server serve udp first while loop (TRY) ')
-                #while(1):
-                print "in main Loop"
-                if (self.sock is not None):# ToDO Remove this if or refactor
-                    currentstr = ""
-                    # isbegin=False
-                    #break
-                    logging.debug('66 output server udp serve first while loop (TRY) Socket not None')
-                    self.handler = outputHandler()
-                    while (1):
-                        logging.debug('69 output server udp serve first while loop (TRY) Socket not None While')
-                        try:
-                            logging.debug('71 output server udp serve first while loop (TRY) Socket not None While (TRY)')
-                            msg = self.handler.readdatapipe()
-                            ln=len(msg)
-                            sent=0
-                            while(ln>0):
-                                self.sock.sendto(msg[sent:min(sent+10000,ln)], address)
-                                print msg[sent:min(sent+10000,ln-sent)]
-                                sent=sent+10000
-                                ln=ln-10000
-                            #time.sleep(1)
-                            print "send Done"
-                        except Exception as a:
-                            print a, " error"
-                            #time.sleep(5)
-                            logging.debug('78 output server udp serve first while loop (TRY) Socket not None While (EXCEPT) '+a.message)
-                            self.sock.close()
-                            break
-                else:
-                    logging.debug('82 output server udp serve first while loop (TRY) Socket is None')
-                    print "Sorry input deamon udp socket has an error"
-
-
+                self.handleLink(address)
             except Exception as e:
                 #if(s.)
                 print e
@@ -101,3 +67,40 @@ class outputDeamonServerUDP:
                 logging.debug('89 output server udp serve first while loop (EXCEPT) '+str(e.message))
                 #time.sleep(5)
                 break
+
+    def handleLink(self,address):
+        print 'Connection address outputdeamon server udp :', address
+        logging.debug('59 output server serve udp first while loop (TRY) ')
+        # while(1):
+        print "in main Loop"
+        if (self.sock is not None):  # ToDO Remove this if or refactor
+            currentstr = ""
+            # isbegin=False
+            # break
+            logging.debug('66 output server udp serve first while loop (TRY) Socket not None')
+            self.handler = outputHandler()
+            while (1):
+                logging.debug('69 output server udp serve first while loop (TRY) Socket not None While')
+                try:
+                    logging.debug('71 output server udp serve first while loop (TRY) Socket not None While (TRY)')
+                    msg = self.handler.readdatapipe()
+                    ln = len(msg)
+                    sent = 0
+                    while (ln > 0):
+                        self.sock.sendto(msg[sent:min(sent + 10000, ln)], address)
+                        print msg[sent:min(sent + 10000, ln - sent)]
+                        sent = sent + 10000
+                        ln = ln - 10000
+                    # time.sleep(1)
+                    print "send Done"
+                except Exception as a:
+                    print a, " error"
+                    # time.sleep(5)
+                    logging.debug(
+                        '78 output server udp serve first while loop (TRY) Socket not None While (EXCEPT) ' + a.message)
+                    self.sock.close()
+                    break
+        else:
+            logging.debug('82 output server udp serve first while loop (TRY) Socket is None')
+            print "Sorry input deamon udp socket has an error"
+

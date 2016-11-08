@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/Help" afterPath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/Help" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" />
     </list>
     <list id="14c6b354-0644-4937-8305-09a92abe676f" name="New changelist" comment="" />
@@ -53,8 +52,8 @@
       <file leaf-file-name="outputDaemonUDPServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+            <state relative-caret-position="624">
+              <caret line="101" column="25" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -155,8 +154,8 @@
         <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonUDPClient.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/Help" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" />
       </list>
     </option>
   </component>
@@ -891,7 +890,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478591765273</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="output Daemon link Added (UDP) with UDPServer-- Bug fixed in message send -- Restore Point (FOR THREADING)">
+      <created>1478602402936</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1478602402936</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -930,7 +936,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Combine PnpConfig and ConfigFileReader" />
     <MESSAGE value="Complete ConfigFile parser adding with bug fixing in file path capture." />
     <MESSAGE value="Merge branch 'addoutputDeamon'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;sqliteinterupt/controldeamon.py&#10;&#9;sqliteinterupt/outputdeamon/outputDeamonFactory.py&#10;&#9;sqliteinterupt/pnp.db&#10;" />
     <MESSAGE value="Change OutputDeamons, Add OutputDeamon Server" />
@@ -955,7 +960,8 @@
     <MESSAGE value="output Daemon link Added (UDP) with UDPServer" />
     <MESSAGE value="output Daemon link Added (UDP) with UDPServer-- Bug fixed" />
     <MESSAGE value="output Daemon link Added (UDP) with UDPServer-- Bug fixed in message send" />
-    <option name="LAST_COMMIT_MESSAGE" value="output Daemon link Added (UDP) with UDPServer-- Bug fixed in message send" />
+    <MESSAGE value="output Daemon link Added (UDP) with UDPServer-- Bug fixed in message send -- Restore Point (FOR THREADING)" />
+    <option name="LAST_COMMIT_MESSAGE" value="output Daemon link Added (UDP) with UDPServer-- Bug fixed in message send -- Restore Point (FOR THREADING)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1359,8 +1365,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+        <state relative-caret-position="624">
+          <caret line="101" column="25" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
