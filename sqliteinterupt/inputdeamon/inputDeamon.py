@@ -20,8 +20,9 @@ def inputmainlink():
         inpip=datarow[2]
         inpport=datarow[3]
         type=datarow[4]
+        prototcol = datarow[5]
         print inpip," ",inpport," ",type
-        if(type=="client"):
+        if(type=="client" and prototcol=="tcp"):
             inputdeamon = factory.getinputDeamon("client").getconnection(inpip,inpport)
 
             while(not inputdeamon.connect()):
@@ -34,11 +35,17 @@ def inputmainlink():
                 print "Input Server Link gone ",e
                 inputdeamon.disconnect()
 
-        elif(type=="server"):
+        elif(type=="server" and prototcol=="tcp"):
             try:
                 inputdeamon=factory.getinputDeamon("server").getconnection(inpip,inpport)
                 inputdeamon.serve()
             except Exception as e:
                 print e
 
+        elif (type == "server" and prototcol == "udp"):
+            try:
+                inputdeamon = factory.getinputDeamon("server","udp").getconnection(inpip, inpport)
+                inputdeamon.serve()
+            except Exception as e:
+                print e
 
