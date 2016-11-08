@@ -76,7 +76,7 @@ class outputDeamonServerUDP:
                             msg = self.handler.readdatapipe()
                             ln=len(msg)
                             sent=0
-                            while(ln<0):
+                            while(ln>0):
                                 self.sock.sendto(msg[sent:min(sent+10000,ln)], address)
                                 sent=sent+10000
                                 ln=ln-10000
