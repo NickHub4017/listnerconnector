@@ -1,4 +1,5 @@
-import os
+#!/usr/bin/python
+# import os
 import sys
 
 path = "/tmp/inppipe"

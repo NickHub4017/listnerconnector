@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="Add debug code. (For IOT device clone and TEST)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonUDPClient.py" />
+    <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="Complete input deamon bugs and output deamons bug Add debug code. (For IOT device clone and TEST)">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonClient.py" afterPath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonClient.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" afterPath="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/testcases/addHundred.py" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/addHundred.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/testcases/inputpipetest.py" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/inputpipetest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestclient.py" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestclient.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestserver.py" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestserver.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/testcases/outputtestclient.py" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/outputtestclient.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/testcases/outputtestserver.py" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/outputtestserver.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/testcases/test_initdb.py" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/test_initdb.py" />
     </list>
     <list id="14c6b354-0644-4937-8305-09a92abe676f" name="New changelist" comment="" />
     <ignored path="listnerconnector.iws" />
@@ -31,43 +36,101 @@
       <file leaf-file-name="controldeamon.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
+            <state relative-caret-position="0">
+              <caret line="0" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="17" />
               <folding>
-                <element signature="e#0#47#0" expanded="true" />
+                <element signature="e#19#66#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="outputDeamonServer.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py">
+      <file leaf-file-name="numberGenerator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+            <state relative-caret-position="0">
+              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addHundred.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/addHundred.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#19#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inputDeamon.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamon.py">
+      <file leaf-file-name="inputpipetest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/inputpipetest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+            <state relative-caret-position="15">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="inputDeamonClient.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonClient.py">
+      <file leaf-file-name="inputtestclient.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/inputtestclient.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="0">
+              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding>
+                <element signature="e#18#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inputtestserver.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/inputtestserver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding>
+                <element signature="e#18#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="outputtestclient.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/outputtestclient.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding>
+                <element signature="e#19#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="outputtestserver.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/outputtestserver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_initdb.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/test_initdb.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding>
+                <element signature="e#18#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,30 +169,32 @@
         <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/PnpConfig.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonFactory.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonClient.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/outputtestclient.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestclient.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestserver.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/DeamonClient.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/testcases/testcontrolserver2.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/testcases/testcontrolserver.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/ControlHandler.py" />
         <option value="$PROJECT_DIR$/testfifo/send.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputHandler.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/addHundred.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/Help" />
         <option value="$PROJECT_DIR$/sqliteinterupt/debuggingprocess.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/debugdatabase.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/initdb.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputHandler.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/inputpipetest.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonUDPClient.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonClient.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonClient.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/addHundred.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/inputpipetest.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestclient.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/inputtestserver.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/outputtestclient.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/outputtestserver.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/testcases/test_initdb.py" />
       </list>
     </option>
   </component>
@@ -164,8 +229,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -703,7 +768,21 @@
       <option name="project" value="LOCAL" />
       <updated>1478510519789</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add debug code. (For IOT device clone and TEST)">
+      <created>1478532050067</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1478532050067</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Complete input deamon bugs and output deamons bug Add debug code. (For IOT device clone and TEST)">
+      <created>1478534312915</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1478534312915</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -757,20 +836,14 @@
     <MESSAGE value="Servers change to work for all interfaces." />
     <MESSAGE value="Add database debug." />
     <MESSAGE value="Add debug code. (For IOT device clone and TEST)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add debug code. (For IOT device clone and TEST)" />
+    <MESSAGE value="Complete input deamon bugs and output deamons bug Add debug code. (For IOT device clone and TEST)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete input deamon bugs and output deamons bug Add debug code. (For IOT device clone and TEST)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/a.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/listner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -869,31 +942,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/outputtestserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/testinputclient.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/outputtestclient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/inputtestserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -960,13 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/addHundred.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm2016.1/system/python_stubs/-1247972723/__builtin__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -978,13 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/inputtestclient.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1030,13 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/inputpipetest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputHandler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1044,21 +1075,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#13#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,7 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1074,7 +1093,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="16" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1082,17 +1100,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-          <folding>
-            <element signature="e#21#34#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/Help">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1100,42 +1107,123 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonClient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        <state relative-caret-position="675">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        <state relative-caret-position="116">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+        <state relative-caret-position="200">
+          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/Help">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="17" />
+          <folding>
+            <element signature="e#19#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/numberGenerator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/addHundred.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="e#19#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/inputpipetest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/inputtestclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding>
+            <element signature="e#18#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/inputtestserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding>
+            <element signature="e#18#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/outputtestclient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding>
+            <element signature="e#19#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/outputtestserver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/test_initdb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding>
+            <element signature="e#18#33#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import random
 import socket
 import json

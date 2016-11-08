@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from DeamonLinkFactory import DeamonLinkFactory
 from initdb import initdbclass
 import time
