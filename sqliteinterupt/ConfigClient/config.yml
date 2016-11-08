@@ -8,7 +8,7 @@ inputdeamon:
     ip: 192.34.63.88
     port: 8100
     type: client            #clent and server are only allowed
-    protocol: tcp
+    protocol: udp
     name: inpdeamon             #Do not chnage this name
 outputdeamon:
     ip: 127.0.0.1

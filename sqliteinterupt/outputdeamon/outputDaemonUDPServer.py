@@ -22,7 +22,7 @@ class outputDeamonServerUDP:
         self.ip = ''
         self.port = portout
         self.buffersize = 1024
-        self.socket=None
+        self.sock=None
         self.server_address = (self.ip, self.port)
         logging.debug(
             '27 output server udp init with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
@@ -54,12 +54,12 @@ class outputDeamonServerUDP:
                     #s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     #s.bind((self.ip, self.port))
                     #s.listen(1)
-                    #self.socket = s
+                    #self.sock = s
                 print 'Connection address outputdeamon server udp :',address
                 logging.debug('59 output server serve udp first while loop (TRY) ')
                 #while(1):
                 print "in main Loop"
-                if (self.socket is not None):# ToDO Remove this if or refactor
+                if (self.sock is not None):# ToDO Remove this if or refactor
                     currentstr = ""
                     # isbegin=False
                     #break
@@ -80,7 +80,7 @@ class outputDeamonServerUDP:
                             break
                 else:
                     logging.debug('82 output server udp serve first while loop (TRY) Socket is None')
-                    print "Sorry input deamon socket has an error"
+                    print "Sorry input deamon udp socket has an error"
 
 
             except Exception as e:
