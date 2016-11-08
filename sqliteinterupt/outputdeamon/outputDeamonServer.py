@@ -1,3 +1,4 @@
+import logging
 import random
 import socket
 import json
@@ -13,7 +14,7 @@ from outputHandler import outputHandler
 #
 # signal.signal(signal.SIGINT, sigint_handler)
 
-
+logging.basicConfig(filename='outputserver.log',level=logging.DEBUG)
 
 
 class outputDeamonServer:
@@ -22,50 +23,68 @@ class outputDeamonServer:
         self.port = portout
         self.buffersize = 1024
         self.socket=None
+        logging.debug(
+            'output server client init with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
 
     def getconnection(self, ipout, portout):
         self.ip = ''
         self.port = portout
+        logging.debug(
+            'output server get connection with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
+
         return self;
     def serve(self):
+        logging.debug('output server serve with ip port buffer')
+
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.bind((self.ip, self.port))
         s.listen(1)
         self.socket =s
         while(1):
+            logging.debug('output server serve first while loop')
             try:
+                logging.debug('output server serve first while loop (TRY)')
                 try:
+                    logging.debug('output server serve first while loop (TRY/TRY)')
                     conn, addr = s.accept()
                 except Exception as e:
                     print "@ accept",e
+                    logging.debug('output server serve first while loop (TRY/EXCEPT)'+e.message)
                     s.shutdown()
                     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     s.bind((self.ip, self.port))
                     s.listen(1)
                     self.socket = s
                 print 'Connection address outputdeamon server:', addr
+                logging.debug('output server serve first while loop (TRY) '+addr)
                 #while(1):
                 print "in main Loop"
                 if (self.socket is not None):# ToDO Remove this if or refactor
                     currentstr = ""
                     # isbegin=False
                     #break
+                    logging.debug('output server serve first while loop (TRY) Socket not None')
                     self.handler = outputHandler()
                     while (1):
+                        logging.debug('output server serve first while loop (TRY) Socket not None While')
                         try:
+                            logging.debug('output server serve first while loop (TRY) Socket not None While (TRY)')
                             msg = self.handler.readdatapipe()
                             conn.send(msg)
-                            time.sleep(1)
+                            #time.sleep(1)
                             print "send Done"
                         except Exception as a:
                             print a, " error"
+                            logging.debug('output server serve first while loop (TRY) Socket not None While (EXCEPT) '+a.message)
                             conn.close()
                             break
                 else:
+                    logging.debug('output server serve first while loop (TRY) Socket is None')
                     print "Sorry input deamon socket has an error"
 
 
             except Exception as e:
                 #if(s.)
                 print e
+                logging.debug('output server serve first while loop (EXCEPT) '+e.message)
                 break

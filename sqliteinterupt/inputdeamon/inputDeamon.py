@@ -30,7 +30,7 @@ def inputmainlink():
             try:
                 inputdeamon.getdata()
                 print "inclient"
-            except Exception,e:
+            except Exception as e:
                 print "Input Server Link gone ",e
                 inputdeamon.disconnect()
 
