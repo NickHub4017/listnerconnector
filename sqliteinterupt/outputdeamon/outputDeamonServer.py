@@ -56,7 +56,7 @@ class outputDeamonServer:
                     s.listen(1)
                     self.socket = s
                 print 'Connection address outputdeamon server:', addr
-                logging.debug('59 output server serve first while loop (TRY) '+addr)
+                logging.debug('59 output server serve first while loop (TRY) ')
                 #while(1):
                 print "in main Loop"
                 if (self.socket is not None):# ToDO Remove this if or refactor
@@ -86,7 +86,7 @@ class outputDeamonServer:
             except Exception as e:
                 #if(s.)
                 print e
-                exc_type, exc_obj, exc_tb = sys.exc_info()
-                logging.debug('89 output server serve first while loop (EXCEPT) '+str(e.message)+' '+exc_tb.tb_lineno)
+                #exc_type, exc_obj, exc_tb = sys.exc_info()
+                logging.debug('89 output server serve first while loop (EXCEPT) '+str(e.message))
                 time.sleep(5)
                 break
