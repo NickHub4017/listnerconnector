@@ -79,6 +79,7 @@ class outputDeamonServerUDP:
                             print "send Done"
                         except Exception as a:
                             print a, " error"
+                            time.sleep(5)
                             logging.debug('78 output server udp serve first while loop (TRY) Socket not None While (EXCEPT) '+a.message)
                             self.sock.close()
                             break
