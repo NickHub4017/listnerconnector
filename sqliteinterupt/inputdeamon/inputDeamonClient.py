@@ -14,7 +14,7 @@ class inputDeamonClient:
         logging.debug('input client init with ip port buffer'+str(ipinp)+' '+str(portinp)+' '+str(self.buffersize))
     def connect(self):
         try:
-            self.socket = socket.socket()
+            self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.socket.settimeout(5)
             self.socket.connect((self.ip, self.port))
             logging.debug('input client connect (TRY) with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))

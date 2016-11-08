@@ -1,6 +1,7 @@
 from inputDeamonClient import inputDeamonClient
 from inputDeamonServer import inputDeamonServer
 from inputDeamonUDPServer import inputDeamonUDPServer
+from inputDeamonUDPClient import inputDeamonClientUDP
 class inputDeamonFactory:
     def __init__(self):
         print "init factory"
@@ -12,3 +13,5 @@ class inputDeamonFactory:
             return inputDeamonServer()
         elif (type == "server" and protocol == "udp"):
             return inputDeamonUDPServer()
+        elif (type == "client" and protocol == "udp"):
+            return inputDeamonClientUDP()

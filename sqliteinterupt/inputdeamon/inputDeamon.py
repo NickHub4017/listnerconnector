@@ -48,4 +48,16 @@ def inputmainlink():
                 inputdeamon.serve()
             except Exception as e:
                 print e
+        elif (type == "client" and prototcol == "udp"):
+            inputdeamon = factory.getinputDeamon("client","udp").getconnection(inpip, inpport)
+
+            while (not inputdeamon.connect()):
+                time.sleep(2)
+                print "Input Link Connection error occured"
+            try:
+                inputdeamon.getdata()
+                print "inclient"
+            except Exception as e:
+                print "Input Server Link gone ", e
+                inputdeamon.disconnect()
 
