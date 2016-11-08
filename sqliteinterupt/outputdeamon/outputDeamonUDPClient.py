@@ -9,11 +9,12 @@ class outputDeamonClientUDP:
         self.ip=ipout
         self.port=portout
         self.buffersize=1024
+        self.server_address = (self.ip, self.port)
     def connect(self):
         try:
-            self.socket = socket.socket()
-            self.socket.settimeout(5)
-            self.socket.connect((self.ip, self.port))
+            self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            #self.socket.settimeout(5)  #ToDo enable timeout
+            #self.socket.connect((self.ip, self.port))
             return True
         except:
             return False
@@ -21,10 +22,11 @@ class outputDeamonClientUDP:
     def getconnection(self,ipout,portout):
         self.ip = ipout
         self.port = portout
+        self.server_address = (self.ip, self.port)
         return self;
 
     def senddata(self):
-        if (self.socket is not None):
+        if (self.sock is not None):
             currentstr = ""
             # isbegin=False
             self.handler = outputHandler()
@@ -32,16 +34,15 @@ class outputDeamonClientUDP:
                 try:
                     #print "wait for send"
                     msg=self.handler.readdatapipe()
-                    self.socket.send(msg)
+                    self.sock.sendto(msg,self.server_address)
                 except Exception as a:
                     print a," error"
-                    self.socket.close()
                     break
         else:
             print "Sorry output deamon socket has an error"
 
     def disconnect(self):
-        if (self.socket is not None):
+        if (self.sock is not None):
             #self.socket.close()
-            self.socket = None
+            self.sock = None
 
