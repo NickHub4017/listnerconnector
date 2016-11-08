@@ -3,7 +3,7 @@ import random
 import socket
 import json
 import time
-
+import sys
 import signal
 import os
 from outputHandler import outputHandler
@@ -86,5 +86,6 @@ class outputDeamonServer:
             except Exception as e:
                 #if(s.)
                 print e
-                logging.debug('89 output server serve first while loop (EXCEPT) '+str(e.message))
+                exc_type, exc_obj, exc_tb = sys.exc_info()
+                logging.debug('89 output server serve first while loop (EXCEPT) '+str(e.message)+' '+exc_tb.tb_lineno)
                 break
