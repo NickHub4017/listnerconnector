@@ -1,1 +1,9 @@
 sudo netstat -nlp | grep :80
+
+sudo pip install git+https://github.com/dpallot/simple-websocket-server.git
+    https://github.com/dpallot/simple-websocket-server
+
+pip install pyyaml
+
+got to ConfigClient   /
+python PnpConfig.py --loadfile config.yml
