@@ -52,8 +52,8 @@
       <file leaf-file-name="outputDaemonUDPServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+            <state relative-caret-position="364">
+              <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -911,7 +911,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478603346122</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Add threading for handling">
+      <created>1478603485274</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1478603485274</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1379,8 +1386,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+        <state relative-caret-position="364">
+          <caret line="98" column="16" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="16" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

@@ -36,6 +36,7 @@ class outputDeamonServerUDP:
         self.server_address = (self.ip, self.port)
         return self;
     def serve(self):
+        self.mythread = None
         logging.debug('37 output server udp serve with ip port buffer')
 
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -60,9 +61,12 @@ class outputDeamonServerUDP:
                     #s.bind((self.ip, self.port))
                     #s.listen(1)
                     #self.sock = s
-                t=thread.start_new_thread(self.handleLink, (address,))
-                print t
-                time.sleep(10)
+                if(self.mythread is not None):
+                    #thread.exit_thread()
+                    print "ToDo implement thread kill function"
+                self.mythread=thread.start_new_thread(self.handleLink, (address,))
+                print self.mythread
+                #time.sleep(10)
             except Exception as e:
                 #if(s.)
                 print e
@@ -74,6 +78,7 @@ class outputDeamonServerUDP:
     def handleLink(self,address):
         print 'Connection address outputdeamon server udp :', address
         logging.debug('59 output server serve udp first while loop (TRY) ')
+
         # while(1):
         print "in main Loop"
         if (self.sock is not None):  # ToDO Remove this if or refactor
