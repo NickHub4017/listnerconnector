@@ -6,6 +6,7 @@ import time
 import sys
 import signal
 import os
+import thread
 from outputHandler import outputHandler
 #
 # def sigint_handler(signum, frame):
@@ -59,7 +60,9 @@ class outputDeamonServerUDP:
                     #s.bind((self.ip, self.port))
                     #s.listen(1)
                     #self.sock = s
-                self.handleLink(address)
+                t=thread.start_new_thread(self.handleLink, (address,))
+                print t
+                time.sleep(10)
             except Exception as e:
                 #if(s.)
                 print e
