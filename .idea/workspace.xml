@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="Add">
+    <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" />
     </list>
@@ -38,8 +38,8 @@
       <file leaf-file-name="outputDeamonServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="89" column="117" selection-start-line="89" selection-start-column="117" selection-end-line="89" selection-end-column="117" />
+            <state relative-caret-position="289">
+              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -748,7 +748,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478577126119</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add line number monitor for exception">
+      <created>1478577347985</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1478577347985</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -805,7 +812,8 @@
     <MESSAGE value="Complete input deamon bugs and output deamons bug Add debug code. (For IOT device clone and TEST)" />
     <MESSAGE value="add Python executable line" />
     <MESSAGE value="Add logger for inputClient and output Server." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add logger for inputClient and output Server." />
+    <MESSAGE value="Add line number monitor for exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add line number monitor for exception" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1193,8 +1201,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="89" column="117" selection-start-line="89" selection-start-column="117" selection-end-line="89" selection-end-column="117" />
+        <state relative-caret-position="289">
+          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

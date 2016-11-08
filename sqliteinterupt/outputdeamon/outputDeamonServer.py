@@ -88,4 +88,5 @@ class outputDeamonServer:
                 print e
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 logging.debug('89 output server serve first while loop (EXCEPT) '+str(e.message)+' '+exc_tb.tb_lineno)
+                time.sleep(5)
                 break
