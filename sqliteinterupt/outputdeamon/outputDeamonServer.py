@@ -24,67 +24,67 @@ class outputDeamonServer:
         self.buffersize = 1024
         self.socket=None
         logging.debug(
-            'output server client init with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
+            '27 output server client init with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
 
     def getconnection(self, ipout, portout):
         self.ip = ''
         self.port = portout
         logging.debug(
-            'output server get connection with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
+            '33 output server get connection with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
 
         return self;
     def serve(self):
-        logging.debug('output server serve with ip port buffer')
+        logging.debug('37 output server serve with ip port buffer')
 
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.bind((self.ip, self.port))
         s.listen(1)
         self.socket =s
         while(1):
-            logging.debug('output server serve first while loop')
+            logging.debug('44 output server serve first while loop')
             try:
-                logging.debug('output server serve first while loop (TRY)')
+                logging.debug('46 output server serve first while loop (TRY)')
                 try:
-                    logging.debug('output server serve first while loop (TRY/TRY)')
+                    logging.debug('48 output server serve first while loop (TRY/TRY)')
                     conn, addr = s.accept()
                 except Exception as e:
                     print "@ accept",e
-                    logging.debug('output server serve first while loop (TRY/EXCEPT)'+e.message)
+                    logging.debug('52 output server serve first while loop (TRY/EXCEPT)'+e.message)
                     s.shutdown()
                     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     s.bind((self.ip, self.port))
                     s.listen(1)
                     self.socket = s
                 print 'Connection address outputdeamon server:', addr
-                logging.debug('output server serve first while loop (TRY) '+addr)
+                logging.debug('59 output server serve first while loop (TRY) '+addr)
                 #while(1):
                 print "in main Loop"
                 if (self.socket is not None):# ToDO Remove this if or refactor
                     currentstr = ""
                     # isbegin=False
                     #break
-                    logging.debug('output server serve first while loop (TRY) Socket not None')
+                    logging.debug('66 output server serve first while loop (TRY) Socket not None')
                     self.handler = outputHandler()
                     while (1):
-                        logging.debug('output server serve first while loop (TRY) Socket not None While')
+                        logging.debug('69 output server serve first while loop (TRY) Socket not None While')
                         try:
-                            logging.debug('output server serve first while loop (TRY) Socket not None While (TRY)')
+                            logging.debug('71 output server serve first while loop (TRY) Socket not None While (TRY)')
                             msg = self.handler.readdatapipe()
                             conn.send(msg)
                             #time.sleep(1)
                             print "send Done"
                         except Exception as a:
                             print a, " error"
-                            logging.debug('output server serve first while loop (TRY) Socket not None While (EXCEPT) '+a.message)
+                            logging.debug('78 output server serve first while loop (TRY) Socket not None While (EXCEPT) '+a.message)
                             conn.close()
                             break
                 else:
-                    logging.debug('output server serve first while loop (TRY) Socket is None')
+                    logging.debug('82 output server serve first while loop (TRY) Socket is None')
                     print "Sorry input deamon socket has an error"
 
 
             except Exception as e:
                 #if(s.)
                 print e
-                logging.debug('output server serve first while loop (EXCEPT) '+e.message)
+                logging.debug('89 output server serve first while loop (EXCEPT) '+str(e.message))
                 break

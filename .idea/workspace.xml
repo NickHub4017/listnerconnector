@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamon.py" afterPath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamon.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonClient.py" afterPath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonClient.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" />
     </list>
     <list id="14c6b354-0644-4937-8305-09a92abe676f" name="New changelist" comment="" />
@@ -40,8 +38,8 @@
       <file leaf-file-name="outputDeamonServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="88" column="88" selection-start-line="88" selection-start-column="88" selection-end-line="88" selection-end-column="88" />
+            <state relative-caret-position="274">
+              <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -736,7 +734,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478573087894</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Add logger for inputClient and output Server.">
+      <created>1478576540559</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1478576540559</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -792,7 +797,8 @@
     <MESSAGE value="Add debug code. (For IOT device clone and TEST)" />
     <MESSAGE value="Complete input deamon bugs and output deamons bug Add debug code. (For IOT device clone and TEST)" />
     <MESSAGE value="add Python executable line" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Python executable line" />
+    <MESSAGE value="Add logger for inputClient and output Server." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add logger for inputClient and output Server." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1180,8 +1186,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="88" column="88" selection-start-line="88" selection-start-column="88" selection-end-line="88" selection-end-column="88" />
+        <state relative-caret-position="274">
+          <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
