@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="Add Auto">
+    <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" afterPath="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
     </list>
@@ -40,8 +40,8 @@
       <file leaf-file-name="controldeamon.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+            <state relative-caret-position="170">
+              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
               <folding>
                 <element signature="e#18#28#0" expanded="true" />
               </folding>
@@ -582,13 +582,6 @@
       <option name="presentableId" value="Default" />
       <updated>1464314430068</updated>
     </task>
-    <task id="LOCAL-00015" summary="Servers change to work for all interfaces.">
-      <created>1478459190833</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1478459190833</updated>
-    </task>
     <task id="LOCAL-00016" summary="Add database debug.">
       <created>1478487276500</created>
       <option name="number" value="00016" />
@@ -925,7 +918,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478695266361</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Bug fixed in same process killing.">
+      <created>1478695409565</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1478695409565</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -964,7 +964,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add logger for inputClient and output Server." />
     <MESSAGE value="Add line number monitor for exception" />
     <MESSAGE value="Logging bug fixed" />
     <MESSAGE value="Add UDPCleint and UDPServer" />
@@ -989,7 +988,8 @@
     <MESSAGE value="Thread added with stop -- bug fixed in constructor" />
     <MESSAGE value="Thread added with stop -- bug fixed in lose of handler" />
     <MESSAGE value="Add process cleanup emechanisam" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add process cleanup emechanisam" />
+    <MESSAGE value="Bug fixed in same process killing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixed in same process killing." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1384,8 +1384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        <state relative-caret-position="170">
+          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
           <folding>
             <element signature="e#18#28#0" expanded="true" />
           </folding>
