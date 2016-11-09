@@ -40,7 +40,7 @@ class outputDeamonServerUDP:
         logging.debug('37 output server udp serve with ip port buffer')
 
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        #self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.sock.bind(self.server_address)
         #s.listen(1)
         while(1):
@@ -55,7 +55,7 @@ class outputDeamonServerUDP:
                     logging.debug('52 output server udp serve first while loop (TRY/EXCEPT)'+e.message)
                     self.sock.close()
                     self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-                    #self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+                    self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
                     self.sock.bind(self.server_address)
 
                     #s.shutdown()
