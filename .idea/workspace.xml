@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/outputTestPipe.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/a.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonServer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonUDPServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonUDPServer.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDeamonServer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testfifo/send.py" afterPath="$PROJECT_DIR$/testfifo/send.py" />
     </list>
     <list id="14c6b354-0644-4937-8305-09a92abe676f" name="New changelist" comment="" />
     <ignored path="listnerconnector.iws" />
@@ -63,16 +57,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Help" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/Help">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/config.yml">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,8 +90,18 @@
       <file leaf-file-name="outputDaemonUDPServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+            <state relative-caret-position="30">
+              <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="outputdeamon.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -636,13 +630,6 @@
       <option name="presentableId" value="Default" />
       <updated>1464314430068</updated>
     </task>
-    <task id="LOCAL-00006" summary="Change OutputDeamons, Add OutputDeamon Server">
-      <created>1478364906712</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1478364906712</updated>
-    </task>
     <task id="LOCAL-00007" summary="Add TestClient for OutPut Server">
       <created>1478364954732</created>
       <option name="number" value="00007" />
@@ -979,7 +966,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478681703286</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Force bind socket optin is added">
+      <created>1478684718322</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1478684718322</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1018,7 +1012,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Make the namedpipe connection universal." />
     <MESSAGE value="Servers change to work for all interfaces." />
     <MESSAGE value="Add database debug." />
     <MESSAGE value="Add debug code. (For IOT device clone and TEST)" />
@@ -1043,7 +1036,8 @@
     <MESSAGE value="Fixed bug in Process start" />
     <MESSAGE value="Control process debug code added" />
     <MESSAGE value="Add system exit phase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add system exit phase" />
+    <MESSAGE value="Force bind socket optin is added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Force bind socket optin is added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1263,16 +1257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding>
-            <element signature="e#22#73#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputHandler.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1440,10 +1424,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="57" column="29" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+        <state relative-caret-position="30">
+          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
           <folding />
         </state>
       </provider>
