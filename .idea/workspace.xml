@@ -4,7 +4,6 @@
     <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testfifo/send.py" afterPath="$PROJECT_DIR$/testfifo/send.py" />
     </list>
     <list id="14c6b354-0644-4937-8305-09a92abe676f" name="New changelist" comment="" />
     <ignored path="listnerconnector.iws" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="outputDaemonUDPServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+            <state relative-caret-position="45">
+              <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -541,13 +540,6 @@
       <option name="presentableId" value="Default" />
       <updated>1464314430068</updated>
     </task>
-    <task id="LOCAL-00010" summary="Input Deamon's Bug fixed">
-      <created>1478367672088</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1478367672088</updated>
-    </task>
     <task id="LOCAL-00011" summary="Add break for none data">
       <created>1478367728523</created>
       <option name="number" value="00011" />
@@ -884,7 +876,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478685866808</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Thread added with stop">
+      <created>1478689943826</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1478689943826</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -923,7 +922,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Servers change to work for all interfaces." />
     <MESSAGE value="Add database debug." />
     <MESSAGE value="Add debug code. (For IOT device clone and TEST)" />
     <MESSAGE value="Complete input deamon bugs and output deamons bug Add debug code. (For IOT device clone and TEST)" />
@@ -948,7 +946,8 @@
     <MESSAGE value="Control process debug code added" />
     <MESSAGE value="Add system exit phase" />
     <MESSAGE value="Force bind socket optin is added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Force bind socket optin is added" />
+    <MESSAGE value="Thread added with stop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Thread added with stop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1342,8 +1341,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
+        <state relative-caret-position="45">
+          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

@@ -64,7 +64,7 @@ class outputDeamonServerUDP:
                     #s.bind((self.ip, self.port))
                     #s.listen(1)
                     #self.sock = s
-                if(self.mythread is not None):
+                if(self.mythread is None):
                     #thread.exit_thread()
                     self.mythread = NetLinkThread()
                     self.mythread.start()
