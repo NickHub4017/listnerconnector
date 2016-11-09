@@ -111,33 +111,42 @@ while(1):
             if newcontrolpid == 0:
                 controldeamon(control_pipe_name)
             else:
-                while(True):
-                    #print "in Main loop"
-                    pipein = open(control_pipe_name, 'r')
-                    line = pipein.read()
-                    if line!="":
-                        print line,"-- is received from the control"
-                        if(line[0]=="T"):
-                            os.kill(newinputpid,9)
-                            newinputpid = os.fork()
-                            currentDb.updateinputpid(newinputpid)
-                            if newinputpid == 0:
-                                inputmainlink()
-                        if (line[1] == "T"):
-                            os.kill(newoutputpid, 9)
-                            newoutputpid = os.fork()
-                            currentDb.updateoutputpid(newoutputpid)
-                            if newoutputpid == 0:
-                                outputmainlink()
-                        if (line[2] == "T"):
-                            print "Control daemon PID ",newcontrolpid
-                            os.kill(newcontrolpid, 9)
-                            newcontrolpid = os.fork()
-                            currentDb.updatecontrolpid(newcontrolpid)
-                            if newcontrolpid == 0:
-                                controldeamon(control_pipe_name)
-                    pipein.close()
-                    time.sleep(1)
+                newprocesspid = os.fork()
+                currentDb.updateprocesspid(newprocesspid)
+                if newprocesspid == 0:
+                    #controldeamon(control_pipe_name)
+                    path="python "+os.environ['HOME']+"/a.py"
+                    os.execl(path,())
+                else:
+                    while(True):
+                        #print "in Main loop"
+                        pipein = open(control_pipe_name, 'r')
+                        line = pipein.read()
+                        if line!="":
+                            print line,"-- is received from the control"
+                            if(line[0]=="T"):
+                                os.kill(newinputpid,9)
+                                newinputpid = os.fork()
+                                currentDb.updateinputpid(newinputpid)
+                                if newinputpid == 0:
+                                    inputmainlink()
+                            if (line[1] == "T"):
+                                os.kill(newoutputpid, 9)
+                                newoutputpid = os.fork()
+                                currentDb.updateoutputpid(newoutputpid)
+                                if newoutputpid == 0:
+                                    outputmainlink()
+                            if (line[2] == "T"):
+                                print "Control daemon PID ",newcontrolpid
+                                os.kill(newcontrolpid, 9)
+                                newcontrolpid = os.fork()
+                                currentDb.updatecontrolpid(newcontrolpid)
+                                if newcontrolpid == 0:
+                                    controldeamon(control_pipe_name)
+                            #ToDo implement the process shutdown mechanism
+
+                        pipein.close()
+                        time.sleep(1)
 
 
 
