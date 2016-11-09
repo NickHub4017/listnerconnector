@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sqliteinterupt/testcases/checkfilepid.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" afterPath="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
     </list>
@@ -29,8 +28,8 @@
       <file leaf-file-name="controldeamon.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="159" column="37" selection-start-line="159" selection-start-column="37" selection-end-line="159" selection-end-column="37" />
+            <state relative-caret-position="200">
+              <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
               <folding>
                 <element signature="e#19#66#0" expanded="true" />
               </folding>
@@ -51,8 +50,8 @@
       <file leaf-file-name="Help" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/Help">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="28" />
+            <state relative-caret-position="135">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -326,7 +325,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.checkfilepid">
+  <component name="RunManager" selected="Python.controldeamon">
     <configuration default="false" name="controldeamon" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -555,8 +554,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.checkfilepid" />
-        <item index="1" class="java.lang.String" itemvalue="Python.controldeamon" />
+        <item index="0" class="java.lang.String" itemvalue="Python.controldeamon" />
+        <item index="1" class="java.lang.String" itemvalue="Python.checkfilepid" />
         <item index="2" class="java.lang.String" itemvalue="Python.inputpipetest" />
         <item index="3" class="java.lang.String" itemvalue="Python.debuggingprocess" />
         <item index="4" class="java.lang.String" itemvalue="Python.outputDeamonServer" />
@@ -576,13 +575,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1464314430068</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Combine PnpConfig and ConfigFileReader">
-      <created>1478324278138</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1478324278138</updated>
     </task>
     <task id="LOCAL-00004" summary="Complete ConfigFile parser adding with bug fixing in file path capture.">
       <created>1478324916255</created>
@@ -920,7 +912,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478676538163</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Control process debug code added">
+      <created>1478680257588</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1478680257588</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -959,7 +958,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Input Deamon's Bug fixed" />
     <MESSAGE value="Add break for none data" />
     <MESSAGE value="Make the namedpipe connection universal." />
     <MESSAGE value="Servers change to work for all interfaces." />
@@ -984,7 +982,8 @@
     <MESSAGE value="Add sockettimeout for the inputclient to re establish connection." />
     <MESSAGE value="Add Process init...   Home must have a.py (a program to run)  and must be a python program" />
     <MESSAGE value="Fixed bug in Process start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug in Process start" />
+    <MESSAGE value="Control process debug code added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Control process debug code added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1338,14 +1337,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/Help">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/testcases/checkfilepid.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1362,10 +1353,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/ConfigClient/Help">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="159" column="37" selection-start-line="159" selection-start-column="37" selection-end-line="159" selection-end-column="37" />
+        <state relative-caret-position="200">
+          <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
           <folding>
             <element signature="e#19#66#0" expanded="true" />
           </folding>

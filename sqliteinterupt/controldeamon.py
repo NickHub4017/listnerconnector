@@ -93,7 +93,7 @@ if not os.path.exists(control_pipe_name):
 
 def thefilewriter(msg):
     a=open("a.txt","a")
-    a.write(msg+" "+str(time.time()))
+    a.write(msg+" "+str(time.time())+"\n")
     a.close()
 
 while(1):
