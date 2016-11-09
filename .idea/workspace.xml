@@ -28,8 +28,8 @@
       <file leaf-file-name="outputDaemonUDPServer.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="73" column="83" selection-start-line="73" selection-start-column="83" selection-end-line="73" selection-end-column="83" />
+            <state relative-caret-position="170">
+              <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -540,13 +540,6 @@
       <option name="presentableId" value="Default" />
       <updated>1464314430068</updated>
     </task>
-    <task id="LOCAL-00012" summary="Make the namedpipe connection universal.">
-      <created>1478414293017</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1478414293017</updated>
-    </task>
     <task id="LOCAL-00013" summary="Make the namedpipe connection universal.">
       <created>1478428383713</created>
       <option name="number" value="00013" />
@@ -883,7 +876,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478690069628</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Thread added with stop -- bug fixed in constructor">
+      <created>1478690246103</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1478690246103</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -922,7 +922,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add debug code. (For IOT device clone and TEST)" />
     <MESSAGE value="Complete input deamon bugs and output deamons bug Add debug code. (For IOT device clone and TEST)" />
     <MESSAGE value="add Python executable line" />
     <MESSAGE value="Add logger for inputClient and output Server." />
@@ -947,7 +946,8 @@
     <MESSAGE value="Force bind socket optin is added" />
     <MESSAGE value="Thread added with stop" />
     <MESSAGE value="Thread added with stop -- bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Thread added with stop -- bug fixed" />
+    <MESSAGE value="Thread added with stop -- bug fixed in constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Thread added with stop -- bug fixed in constructor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1341,8 +1341,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputDaemonUDPServer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="73" column="83" selection-start-line="73" selection-start-column="83" selection-end-line="73" selection-end-column="83" />
+        <state relative-caret-position="170">
+          <caret line="66" column="46" selection-start-line="66" selection-start-column="46" selection-end-line="66" selection-end-column="46" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
