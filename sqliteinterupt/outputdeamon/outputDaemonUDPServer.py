@@ -8,6 +8,7 @@ import signal
 import os
 import thread
 from outputHandler import outputHandler
+import threading
 #
 # def sigint_handler(signum, frame):
 #     p = os.system('echo %s|sudo -S %s' % ('ua741', 'tcpkill ip host 127.0.0.1 port 8050'))
@@ -65,8 +66,15 @@ class outputDeamonServerUDP:
                     #self.sock = s
                 if(self.mythread is not None):
                     #thread.exit_thread()
+                    self.mythread = NetLinkThread()
+                    self.mythread.start()
                     print "ToDo implement thread kill function"
-                self.mythread=thread.start_new_thread(self.handleLink, (address,))
+                else:
+                    self.mythread.stop()
+                    self.mythread = NetLinkThread()
+                    self.mythread.start()
+                #self.mythread=thread.start_new_thread(self.handleLink, (address,))
+
                 print self.mythread
                 #time.sleep(10)
             except Exception as e:
@@ -116,3 +124,56 @@ class outputDeamonServerUDP:
             logging.debug('82 output server udp serve first while loop (TRY) Socket is None')
             print "Sorry input deamon udp socket has an error"
 
+class NetLinkThread(threading.Thread):
+
+    def __init__(self,sock,handler,address):
+        super(NetLinkThread, self).__init__()
+        self._stopped = False
+        self.sock=sock
+        self.handler=handler
+        self.address=address
+
+    def run(self):
+        #while not self._stopped:
+        print 'Connection address outputdeamon server udp :', self.address
+        logging.debug('59 output server serve udp first while loop (TRY) ')
+
+        # while(1):
+        print "in main Loop"
+        if (self.sock is not None):  # ToDO Remove this if or refactor
+            currentstr = ""
+            # isbegin=False
+            # break
+            logging.debug('66 output server udp serve first while loop (TRY) Socket not None')
+            self.handler = outputHandler()
+            while (not self._stopped):
+                logging.debug('69 output server udp serve first while loop (TRY) Socket not None While')
+                try:
+                    logging.debug('71 output server udp serve first while loop (TRY) Socket not None While (TRY)')
+                    msg = self.handler.readdatapipe()
+                    if (msg is None):
+                        continue
+                    ln = len(msg)
+                    sent = 0
+                    while (ln > 0):
+                        self.sock.sendto(msg[sent:min(sent + 10000, ln)], self.address)
+                        # print msg[sent:min(sent + 10000, ln - sent)]
+                        sent = sent + 10000
+                        ln = ln - 10000
+                    # time.sleep(1)
+                    print "send Done"
+                except Exception as a:
+                    print a, " error"
+                    # time.sleep(5)
+                    logging.debug(
+                        '78 output server udp serve first while loop (TRY) Socket not None While (EXCEPT) ' + a.message)
+                    self.sock.close()
+                    break
+
+        else:
+            logging.debug('82 output server udp serve first while loop (TRY) Socket is None')
+            print "Sorry input deamon udp socket has an error"
+
+
+    def stop(self):
+        self._stopped = True
