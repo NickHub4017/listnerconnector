@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import sys
 
 from DeamonLinkFactory import DeamonLinkFactory
 from initdb import initdbclass
@@ -104,6 +105,7 @@ while(1):
     currentDb.updateinputpid(newinputpid)
     if newinputpid == 0:
         inputmainlink()
+        sys.exit(0)._exit()
 
     else:
         newoutputpid = os.fork()
@@ -111,12 +113,14 @@ while(1):
         currentDb.updateoutputpid(newoutputpid)
         if newoutputpid == 0:
             outputmainlink()
+            sys.exit(0)._exit()
         else:
             newcontrolpid = os.fork()
             thefilewriter("create control 1")
             currentDb.updatecontrolpid(newcontrolpid)
             if newcontrolpid == 0:
                 controldeamon(control_pipe_name)
+                sys.exit(0)._exit()
             else:
                 newprocesspid = os.fork()
                 thefilewriter("create process 1")
@@ -125,6 +129,7 @@ while(1):
                     #controldeamon(control_pipe_name)
                     path="python "+os.environ['HOME']+"/a.py"
                     os.system(path)
+                    sys.exit(0)._exit()
                 else:
                     while(True):
                         #print "in Main loop"
