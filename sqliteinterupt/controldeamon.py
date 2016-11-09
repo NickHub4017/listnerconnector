@@ -40,7 +40,8 @@ def processCleanUp():
     print pslist
     for p in pslist:
         try:
-            os.kill(p,9)
+            if(os.getpid()!=p):
+                os.kill(p,9)
         except Exception as e:
             print "Error occured in init process cleanup (Killing):- " + e.message
 
