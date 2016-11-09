@@ -66,12 +66,12 @@ class outputDeamonServerUDP:
                     #self.sock = s
                 if(self.mythread is None):
                     #thread.exit_thread()
-                    self.mythread = NetLinkThread()
+                    self.mythread = NetLinkThread(self.sock,self.handler,address)
                     self.mythread.start()
                     print "ToDo implement thread kill function"
                 else:
                     self.mythread.stop()
-                    self.mythread = NetLinkThread()
+                    self.mythread = NetLinkThread(self.sock, self.handler, address)
                     self.mythread.start()
                 #self.mythread=thread.start_new_thread(self.handleLink, (address,))
 
