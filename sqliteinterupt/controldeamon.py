@@ -91,27 +91,35 @@ control_pipe_name="controlnamepipe"
 if not os.path.exists(control_pipe_name):
     os.mkfifo(control_pipe_name)
 
+def thefilewriter(msg):
+    a=open("a.txt","a")
+    a.write(msg+" "+str(time.time()))
+    a.close()
 
 while(1):
     print "loop terminated"
 
     newinputpid = os.fork()
+    thefilewriter("create input 1")
     currentDb.updateinputpid(newinputpid)
     if newinputpid == 0:
         inputmainlink()
 
     else:
         newoutputpid = os.fork()
+        thefilewriter("create output 1")
         currentDb.updateoutputpid(newoutputpid)
         if newoutputpid == 0:
             outputmainlink()
         else:
             newcontrolpid = os.fork()
+            thefilewriter("create control 1")
             currentDb.updatecontrolpid(newcontrolpid)
             if newcontrolpid == 0:
                 controldeamon(control_pipe_name)
             else:
                 newprocesspid = os.fork()
+                thefilewriter("create process 1")
                 currentDb.updateprocesspid(newprocesspid)
                 if newprocesspid == 0:
                     #controldeamon(control_pipe_name)
@@ -126,12 +134,14 @@ while(1):
                             print line,"-- is received from the control"
                             if(line[0]=="T"):
                                 os.kill(newinputpid,9)
+                                thefilewriter("create input 2")
                                 newinputpid = os.fork()
                                 currentDb.updateinputpid(newinputpid)
                                 if newinputpid == 0:
                                     inputmainlink()
                             if (line[1] == "T"):
                                 os.kill(newoutputpid, 9)
+                                thefilewriter("create output 2")
                                 newoutputpid = os.fork()
                                 currentDb.updateoutputpid(newoutputpid)
                                 if newoutputpid == 0:
@@ -140,6 +150,7 @@ while(1):
                                 print "Control daemon PID ",newcontrolpid
                                 os.kill(newcontrolpid, 9)
                                 newcontrolpid = os.fork()
+                                thefilewriter("create control 2")
                                 currentDb.updatecontrolpid(newcontrolpid)
                                 if newcontrolpid == 0:
                                     controldeamon(control_pipe_name)
