@@ -28,7 +28,9 @@ class inputDeamonServer:
         return self;
     def serve(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.bind((self.ip, self.port))
+
         s.listen(1)
         try:
             conn, addr = s.accept()

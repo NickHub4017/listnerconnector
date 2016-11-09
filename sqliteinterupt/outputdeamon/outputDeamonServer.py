@@ -37,6 +37,7 @@ class outputDeamonServer:
         logging.debug('37 output server serve with ip port buffer')
 
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         s.bind((self.ip, self.port))
         s.listen(1)
         self.socket =s
@@ -52,6 +53,7 @@ class outputDeamonServer:
                     logging.debug('52 output server serve first while loop (TRY/EXCEPT)'+e.message)
                     s.shutdown()
                     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
                     s.bind((self.ip, self.port))
                     s.listen(1)
                     self.socket = s
