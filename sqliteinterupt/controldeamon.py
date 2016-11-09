@@ -18,6 +18,36 @@ from outputdeamon.outputdeamon import outputmainlink
 #      def run(self):
 #          if(self.deamonthreadtype==1):
 #             inputmainlink()
+def processCleanUp():
+    tmp = os.popen("ps aux").read()
+    pslist=[]
+    #print tmp
+    for line in tmp.split("\n"):
+        x=1
+        line=line.strip()
+        procdata=line.split(" ")
+        for c in range(0,procdata.count('')):
+            procdata.remove('')
+        print procdata
+        try:
+            if("controldeamon.py" in procdata[11]):
+                try:
+                    pslist.append(int(procdata[1]))
+                except Exception as e:
+                    print "Error occured in init process cleanup:- "+e.message
+        except Exception as e:
+            print "Error occured in init process cleanup Main try :- "+e.message
+    print pslist
+    for p in pslist:
+        try:
+            os.kill(p,9)
+        except Exception as e:
+            print "Error occured in init process cleanup (Killing):- " + e.message
+
+        #time.sleep(1)
+print "Please wait for Process cleanup"
+processCleanUp()
+print "Process cleanUp done"
 
 currentDb=initdbclass()
 
