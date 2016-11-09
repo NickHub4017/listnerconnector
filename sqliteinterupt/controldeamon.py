@@ -116,7 +116,7 @@ while(1):
                 if newprocesspid == 0:
                     #controldeamon(control_pipe_name)
                     path="python "+os.environ['HOME']+"/a.py"
-                    os.execl(path,())
+                    os.system(path)
                 else:
                     while(True):
                         #print "in Main loop"
