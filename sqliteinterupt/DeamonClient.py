@@ -18,6 +18,10 @@ class DeamonClient:
 
 
     def getdata(self):
+        try:
+            self.socket.send(str(1))
+        except Exception as e:
+            print "ID Sending error ",e
         if(self.socket is not None):
             currentstr=""
             #isbegin=False

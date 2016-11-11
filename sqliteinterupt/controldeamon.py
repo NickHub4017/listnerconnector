@@ -37,7 +37,7 @@ def processCleanUp():
                     print "Error occured in init process cleanup:- "+e.message
         except Exception as e:
             print "Error occured in init process cleanup Main try :- "+e.message
-    print pslist
+    #print pslist
     for p in pslist:
         try:
             if(os.getpid()!=p):
