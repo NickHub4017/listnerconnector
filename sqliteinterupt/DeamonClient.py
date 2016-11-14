@@ -40,7 +40,7 @@ class DeamonClient:
                 try:
                     changedcomponents=self.handler.insertcontrolmessage(self.controlmessage)
                 except Exception as e:
-                    if("timeout" in e.message):
+                    if("Timeout" in e.message):
                         print "Timeout"
                     print e," At get data"
                 #ToDo send the changed components to shutdown thread and create new
