@@ -32,7 +32,7 @@ class DeamonClient:
             #isbegin=False
             while(1):#ToDo remove onetime buffer read and add dynamic reading.
                 #self.controlmessage = str(self.socket.recv(self.buffersize))
-                print self.controlmessage, " <--->  "
+                #print self.controlmessage, " <--->  "
                 self.controlmessage=str(self.socket.recv(self.buffersize))
                 print self.controlmessage," ---  "
                 #time.sleep(5)
