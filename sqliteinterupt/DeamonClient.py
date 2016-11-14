@@ -22,14 +22,14 @@ class DeamonClient:
 
     def getdata(self):
         try:
-            self.socket.send(str(1))
+            self.socket.send("togen")
         except Exception as e:
             print "ID Sending error ",e
         if(self.socket is not None):
             currentstr=""
             #isbegin=False
             while(1):#ToDo remove onetime buffer read and add dynamic reading.
-                self.controlmessage = str(self.socket.recv(self.buffersize))
+                #self.controlmessage = str(self.socket.recv(self.buffersize))
                 print self.controlmessage, " <--->  "
                 self.controlmessage=str(self.socket.recv(self.buffersize))
                 print self.controlmessage," ---  "
