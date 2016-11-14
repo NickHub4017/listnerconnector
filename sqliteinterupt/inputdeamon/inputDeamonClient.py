@@ -19,9 +19,10 @@ class inputDeamonClient:
             self.socket.connect((self.ip, self.port))
             logging.debug('input client connect (TRY) with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
             return True
-        except:
+        except Exception as e:
             logging.debug(
                 'input client connect (EXCEPT) with ip port buffer' + str(self.ip) + ' ' + str(self.port) + ' ' + str(self.buffersize))
+            print e,"MSG ERR"
             return False
 
     def getconnection(self,ipinp,portinp):
