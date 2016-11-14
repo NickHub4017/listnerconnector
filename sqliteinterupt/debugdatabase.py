@@ -6,4 +6,3 @@ currentDb.getAlldebug()
 
 import os
 
-print path

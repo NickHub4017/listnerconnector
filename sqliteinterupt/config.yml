@@ -1,0 +1,21 @@
+controldeamon:
+    ip: 192.168.1.2
+    port: 8080
+    type: client                #clent and server are only allowed
+    protocol: tcp               #tcp udp websocket are only allowed
+    name: cntrldeamon           #Do not chnage this name
+inputdeamon:
+    ip: 127.0.0.1 #192.34.63.88
+    port: 8100
+    type: server            #clent and server are only allowed
+    protocol: udp
+    name: inpdeamon             #Do not chnage this name
+outputdeamon:
+    ip: 127.0.0.1
+    port: 8120
+    type: server               #clent and server are only allowed
+    protocol: tcp       #tcp udp websocket are only allowed
+    name: oudeamon             #Do not chnage this name
+metadata:
+    deviceparameters: -p 100 -q 10000
+    programparameters: -t 100 -y 10000

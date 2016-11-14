@@ -120,7 +120,8 @@ class initdbclass():
         fetcheddata = cursor.fetchall()
         # return fetcheddata
         #return fetcheddata
-        print fetcheddata
+        for j in fetcheddata:
+            print "%s --> time %s \n \t ip:- %s  port:- %s  type:- %s  protocol:- %s" % j
         self.closedb(conn);
 
         print "--------------------devicemetadata  METADATA-----------\n"
@@ -128,6 +129,7 @@ class initdbclass():
         cursor.execute('SELECT * FROM devicemetadata')
         fetcheddata = cursor.fetchall()
         # return fetcheddata
-        print fetcheddata
+        for q in fetcheddata:
+            print "%s key %s \t value:- %s " %q
 
 
