@@ -8,12 +8,14 @@ class DeamonClient:
         print inpport," ",inpip
         self.port=int(inpport)
         self.ip=inpip
+        self.timelimit=10;
         self.socket=None
         self.buffersize=1024
 
     def connect(self):
         try:
             self.socket = socket.socket()
+            self.socket.settimeout(1)
             self.socket.connect((self.ip, self.port))
             return True
         except:
@@ -38,6 +40,8 @@ class DeamonClient:
                 try:
                     changedcomponents=self.handler.insertcontrolmessage(self.controlmessage)
                 except Exception as e:
+                    if("timeout" in e.message):
+                        print "Timeout"
                     print e," At get data"
                 #ToDo send the changed components to shutdown thread and create new
                 #print "Control deamon data updated"
