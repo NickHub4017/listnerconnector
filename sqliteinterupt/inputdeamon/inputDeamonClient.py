@@ -45,7 +45,7 @@ class inputDeamonClient:
                 logging.debug('input client getdata first while loop')
                 try:
                     logging.debug('input client getdata first while loop (TRY)')
-                    print "wait for recv"
+                    print "wait for recv input client"
                     errorcount=errorcount+1
                     inputmessage = str(self.socket.recv(self.buffersize))
                     if(not inputmessage):
