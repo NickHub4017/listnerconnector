@@ -1,4 +1,7 @@
 import socket
+
+import time
+
 from ControlHandler import ControlHandler
 class DeamonClient:
     def __init__(self,inpport=1000,inpip="127.0.0.1"):
@@ -26,11 +29,19 @@ class DeamonClient:
             currentstr=""
             #isbegin=False
             while(1):#ToDo remove onetime buffer read and add dynamic reading.
+                self.controlmessage = str(self.socket.recv(self.buffersize))
+                print self.controlmessage, " <--->  "
                 self.controlmessage=str(self.socket.recv(self.buffersize))
+                print self.controlmessage," ---  "
+                #time.sleep(5)
                 self.handler=ControlHandler()
-                changedcomponents=self.handler.insertcontrolmessage(self.controlmessage)
+                try:
+                    changedcomponents=self.handler.insertcontrolmessage(self.controlmessage)
+                except Exception as e:
+                    print e," At get data"
                 #ToDo send the changed components to shutdown thread and create new
                 #print "Control deamon data updated"
+                print changedcomponents
                 return changedcomponents
                 #break;
         else:

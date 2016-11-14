@@ -15,8 +15,11 @@ class ControlHandler:
         controlmsgjson = json.loads(controlmsg)
         #print controlmsgjson
         inputdeamonprop=controlmsgjson["inpdeamon"]
+        print inputdeamonprop,"  ++ ---   "
         outputdeamonprop = controlmsgjson["oupdeamon"]
+        print outputdeamonprop, "  ++ ---   "
         cntrldeamonprop = controlmsgjson["cntrldeamon"]
+        print cntrldeamonprop, "  ++ ---   "
 
         controlmessagetimestamp=controlmsgjson["timestamp"]
         controlmessagefromip = controlmsgjson["fromip"]

@@ -2,7 +2,8 @@ import yaml
 import sys
 import os
 import time
-sys.path.append(os.path.abspath('../'))
+pathofparent = os.path.abspath(os.path.join(os.path.dirname(__file__),".."))
+sys.path.append(pathofparent)
 from initdb import initdbclass
 
 db=initdbclass()

@@ -2,7 +2,9 @@ import sys
 import getopt
 import sys
 import os
-sys.path.append('../')
+
+pathofparent = os.path.abspath(os.path.join(os.path.dirname(__file__),".."))
+sys.path.append(pathofparent)
 from initdb import initdbclass
 from ConfigFileReader import doFileConfig
 import ConfigFileReader

@@ -4,7 +4,8 @@ from inputDeamonFactory import inputDeamonFactory
 import time
 import sys
 import os
-sys.path.append(os.path.abspath('../'))
+pathofparent = os.path.abspath(os.path.join(os.path.dirname(__file__),".."))
+sys.path.append(pathofparent)
 
 
 from initdb import initdbclass
@@ -27,7 +28,7 @@ def inputmainlink():
 
             while(not inputdeamon.connect()):
                 time.sleep(2)
-                print "Input Link Connection error occured"
+                print "Input Link Connection error occured" + " ip " + str(inpip) + " port "+ str(inpport)
             try:
                 inputdeamon.getdata()
                 print "inclient"

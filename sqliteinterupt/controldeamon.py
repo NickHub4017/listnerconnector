@@ -86,7 +86,7 @@ def controldeamon(pipename):
             controllink = DeamonLinkFactory("client").getConnection(controlip, controlport)
             while (not controllink.connect()):
                 time.sleep(2)
-                print "Control Link Connection error occured"
+                print "Control Link Connection error occured" + " ip "+ str(controlip) + " port " + str(controlport)
             try:
                 # inputthread.start()
                 msgls=controllink.getdata()  # This will return only an error occurs in control stream OR UPDATE HAPPENS
@@ -105,7 +105,7 @@ def controldeamon(pipename):
                 #os.kill(newoutputpid)
                 break;
             except Exception as e:
-                print "Control Server Link gone ",e.message
+                print "Control Server Link gone ",e
                 controllink.disconnect()
 
 
@@ -167,6 +167,7 @@ while(1):
                         #print "in Main loop"
                         pipein = open(control_pipe_name, 'r')
                         line = pipein.read()
+                        print line,"----+++++++++----------"
                         if line!="":
                             print line,"-- is received from the control"
                             if(line[0]=="T"):
