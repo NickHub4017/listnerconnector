@@ -3,8 +3,8 @@
 import socket
 import time
 
-TCP_IP = '127.0.0.1'
-TCP_PORT = 8120
+TCP_IP = '192.168.1.6'
+TCP_PORT = 8100
 BUFFER_SIZE = 1024
 MESSAGE = "Hello, World!"
 
@@ -23,6 +23,7 @@ try:
             break
     #data = s.recv(BUFFER_SIZE)
     s.close()
+    print "WTF"
 except Exception as E:
     print E.message
 
