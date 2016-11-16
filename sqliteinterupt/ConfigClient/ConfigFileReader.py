@@ -59,6 +59,7 @@ def doFileConfig(file):
         db.updatefulldeamondata(configs["inputdeamon"], time.time())
     if (isoutputchange):
         db.updatefulldeamondata(configs["outputdeamon"], time.time())
+    db.updatedevicemetadata("processname",configs["processname"], time.time())
     print iscontrolchange,isinputchange,isoutputchange
 
 
