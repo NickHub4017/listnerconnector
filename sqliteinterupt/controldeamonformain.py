@@ -1,6 +1,8 @@
 #!/usr/bin/python
 import sys
 
+from termcolor import cprint
+
 from DeamonLinkFactory import DeamonLinkFactory
 from initdb import initdbclass
 import time
@@ -10,7 +12,8 @@ currentDb=initdbclass()
 
 
 def controldeamon(pipename):
-    print "Control deamon Created"
+    #print "Control deamon Created"
+    cprint("Control deamon Created", 'yellow')
     currentDb.updatecontrolpid(os.getgid())
     # print('Hello from parent', os.getpid(), newinputpid)
     while (1):  ##For get the data from control
@@ -24,7 +27,8 @@ def controldeamon(pipename):
             controllink = DeamonLinkFactory("client").getConnection(controlip, controlport)
             while (not controllink.connect()):
                 time.sleep(2)
-                print "Control Link Connection error occured" + " ip "+ str(controlip) + " port " + str(controlport)
+                #print "Control Link Connection error occured" + " ip "+ str(controlip) + " port " + str(controlport)
+                cprint("Control Link Connection error occured" + " ip "+ str(controlip) + " port " + str(controlport)+" ConrolLink", 'red')
             try:
                 # inputthread.start()
                 msgls=controllink.getdata()  # This will return only an error occurs in control stream OR UPDATE HAPPENS

@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="Add debig line for Client">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sqliteinterupt/controldeamonformain.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sqliteinterupt/main.py" />
+    <list default="true" id="ba6581df-1b0d-4c09-b8be-c830b2088fd2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/DeamonClient.py" afterPath="$PROJECT_DIR$/sqliteinterupt/DeamonClient.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/config.yml" afterPath="$PROJECT_DIR$/sqliteinterupt/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/initdb.py" afterPath="$PROJECT_DIR$/sqliteinterupt/initdb.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamon.py" afterPath="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamon.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py" afterPath="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/controldeamonformain.py" afterPath="$PROJECT_DIR$/sqliteinterupt/controldeamonformain.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/main.py" afterPath="$PROJECT_DIR$/sqliteinterupt/main.py" />
     </list>
     <list id="14c6b354-0644-4937-8305-09a92abe676f" name="New changelist" comment="" />
     <ignored path="listnerconnector.iws" />
@@ -31,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1740">
-              <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+            <state relative-caret-position="75">
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
                 <element signature="e#18#28#0" expanded="true" />
               </folding>
@@ -43,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controldeamonformain.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controldeamonformain.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamonformain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="31" />
+            <state relative-caret-position="569">
+              <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
               <folding>
                 <element signature="e#18#28#0" expanded="true" />
               </folding>
@@ -114,19 +109,19 @@
         <option value="$PROJECT_DIR$/sqliteinterupt/debugdatabase.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/debuggingprocess.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/sysdebug.py" />
-        <option value="$PROJECT_DIR$/testfifo/send.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/testcases/testcontrolserver2.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/testcases/configchange.json" />
         <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamonClient.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/testcases/DemoControlMessageGen.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/inputdeamon/inputDeamon.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/outputdeamon/outputdeamon.py" />
-        <option value="$PROJECT_DIR$/sqliteinterupt/controldeamonformain.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/initdb.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/DeamonClient.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py" />
         <option value="$PROJECT_DIR$/sqliteinterupt/config.yml" />
         <option value="$PROJECT_DIR$/sqliteinterupt/main.py" />
+        <option value="$PROJECT_DIR$/testfifo/send.py" />
+        <option value="$PROJECT_DIR$/sqliteinterupt/controldeamonformain.py" />
       </list>
     </option>
   </component>
@@ -297,23 +292,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration default="false" name="controldeamon" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sqliteinterupt" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="listnerconnector" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sqliteinterupt/controldeamon.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="DemoControlMessageGen" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -378,6 +356,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="listnerconnector" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sqliteinterupt/controldeamonformain.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="send" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/testfifo" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="listnerconnector" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testfifo/send.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -517,19 +512,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.controldeamon" />
-      <item index="1" class="java.lang.String" itemvalue="Python.DemoControlMessageGen" />
-      <item index="2" class="java.lang.String" itemvalue="Python.main" />
-      <item index="3" class="java.lang.String" itemvalue="Python.outputdeamon" />
-      <item index="4" class="java.lang.String" itemvalue="Python.controldeamonformain" />
+      <item index="0" class="java.lang.String" itemvalue="Python.DemoControlMessageGen" />
+      <item index="1" class="java.lang.String" itemvalue="Python.main" />
+      <item index="2" class="java.lang.String" itemvalue="Python.outputdeamon" />
+      <item index="3" class="java.lang.String" itemvalue="Python.controldeamonformain" />
+      <item index="4" class="java.lang.String" itemvalue="Python.send" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.controldeamonformain" />
-        <item index="2" class="java.lang.String" itemvalue="Python.outputdeamon" />
-        <item index="3" class="java.lang.String" itemvalue="Python.DemoControlMessageGen" />
-        <item index="4" class="java.lang.String" itemvalue="Python.controldeamon" />
+        <item index="1" class="java.lang.String" itemvalue="Python.send" />
+        <item index="2" class="java.lang.String" itemvalue="Python.controldeamonformain" />
+        <item index="3" class="java.lang.String" itemvalue="Python.outputdeamon" />
+        <item index="4" class="java.lang.String" itemvalue="Python.DemoControlMessageGen" />
       </list>
     </recent_temporary>
   </component>
@@ -546,13 +541,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1464314430068</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Add line number monitor for exception">
-      <created>1478577581662</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1478577581662</updated>
     </task>
     <task id="LOCAL-00028" summary="Logging bug fixed">
       <created>1478577730381</created>
@@ -890,12 +878,19 @@
       <option name="project" value="LOCAL" />
       <updated>1479267194198</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Change the Deamon to work in subprocess library">
+      <created>1479267237204</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1479267237204</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22982322" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.49730977" order="6" side_tool="false" content_ui="tabs" />
@@ -903,7 +898,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29210135" sideWeight="0.5272867" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34277198" sideWeight="0.7609531" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37704918" sideWeight="0.49884704" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37555885" sideWeight="0.49884704" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29210135" sideWeight="0.4727133" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -929,7 +924,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="input Daemon link Added (UDP) with UDPClient" />
     <MESSAGE value="output Daemon link Added (UDP) with UDPServer" />
     <MESSAGE value="output Daemon link Added (UDP) with UDPServer-- Bug fixed" />
     <MESSAGE value="output Daemon link Added (UDP) with UDPServer-- Bug fixed in message send" />
@@ -954,7 +948,8 @@
     <MESSAGE value=" fix bug in control client" />
     <MESSAGE value="Add debig line for Client" />
     <MESSAGE value="Config file reader Change to capture the process name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Config file reader Change to capture the process name" />
+    <MESSAGE value="Change the Deamon to work in subprocess library" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change the Deamon to work in subprocess library" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1202,13 +1197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testfifo/send.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/sysdebug.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1315,20 +1303,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamonformain.py">
+    <entry file="file://$PROJECT_DIR$/testfifo/send.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
-          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="31" />
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
-            <element signature="e#18#28#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sqliteinterupt/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1740">
-          <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+        <state relative-caret-position="75">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#18#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqliteinterupt/controldeamonformain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="49" column="51" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
           <folding>
             <element signature="e#18#28#0" expanded="true" />
           </folding>

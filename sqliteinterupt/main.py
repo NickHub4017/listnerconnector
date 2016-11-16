@@ -4,7 +4,7 @@ import sys
 import subprocess
 
 import signal
-
+from termcolor import colored, cprint
 
 from initdb import initdbclass
 import time
@@ -48,9 +48,11 @@ def processCleanUp():
             print "Error occured in init process cleanup (Killing):- " + e.message
 
         #time.sleep(1)
-print "Please wait for Process cleanup"
+#print "Please wait for Process cleanup"
+cprint("Please wait for Process cleanup", 'green')
 processCleanUp()
-print "Process cleanUp done"
+#print "Process cleanUp done"
+cprint("Process cleanUp done", 'green')
 
 currentDb=initdbclass()
 
@@ -104,7 +106,8 @@ while(1):
     line = pipein.read()
     print line,"----+++++++++----------"
     if line!="":
-        print line,"-- is received from the control"
+        #print line,"-- is received from the control"
+        cprint(line+" -- is received from the control", 'yellow')
     if(line[0]=="T"):
         os.kill(inpproc.pid,9)
         inpproc = subprocess.Popen(['python', inputpath])
