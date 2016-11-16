@@ -1,5 +1,5 @@
 import socket
-
+from initdb import initdbclass
 import time
 
 from ControlHandler import ControlHandler
@@ -11,6 +11,7 @@ class DeamonClient:
         self.timelimit=10;
         self.socket=None
         self.buffersize=1024
+        self.db=initdbclass()
 
     def connect(self):
         try:
@@ -24,7 +25,7 @@ class DeamonClient:
 
     def getdata(self):
         try:
-            self.socket.send("togen")
+            self.socket.send(self.db.getdata("processname"))
         except Exception as e:
             print "ID Sending error ",e
         if(self.socket is not None):

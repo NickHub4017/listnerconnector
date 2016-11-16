@@ -24,6 +24,7 @@ class initdbclass():
             cursor.execute("insert into devicemetadata (key) values ('outputpid');")
             cursor.execute("insert into devicemetadata (key) values ('controlutpid');")
             cursor.execute("insert into devicemetadata (key) values ('processputpid');")
+            cursor.execute("insert into devicemetadata (key) values ('processname');")
             #cursor.execute("insert into devicemetadata (key,value) values ('controlip','127.0.0.1');")
             #cursor.execute("insert into devicemetadata (key,value) values ('controlport',8080);")
 

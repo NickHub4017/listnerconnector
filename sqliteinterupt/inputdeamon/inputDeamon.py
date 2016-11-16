@@ -62,3 +62,5 @@ def inputmainlink():
                 print "Input Server Link gone ", e
                 inputdeamon.disconnect()
 
+
+inputmainlink()

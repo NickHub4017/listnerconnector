@@ -5,7 +5,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sqliteinterupt/controldeamonformain.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sqliteinterupt/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py" afterPath="$PROJECT_DIR$/sqliteinterupt/ConfigClient/ConfigFileReader.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/DeamonClient.py" afterPath="$PROJECT_DIR$/sqliteinterupt/DeamonClient.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/config.yml" afterPath="$PROJECT_DIR$/sqliteinterupt/config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqliteinterupt/initdb.py" afterPath="$PROJECT_DIR$/sqliteinterupt/initdb.py" />
@@ -548,13 +547,6 @@
       <option name="presentableId" value="Default" />
       <updated>1464314430068</updated>
     </task>
-    <task id="LOCAL-00026" summary="Add line number monitor for exception">
-      <created>1478577347985</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1478577347985</updated>
-    </task>
     <task id="LOCAL-00027" summary="Add line number monitor for exception">
       <created>1478577581662</created>
       <option name="number" value="00027" />
@@ -891,7 +883,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479145171006</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Config file reader Change to capture the process name">
+      <created>1479267194154</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1479267194198</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -900,6 +899,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22982322" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.49730977" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29210135" sideWeight="0.5272867" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34277198" sideWeight="0.7609531" order="9" side_tool="false" content_ui="tabs" />
@@ -909,7 +909,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39940387" sideWeight="0.49726775" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -930,7 +929,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="output Daemon link Added (UDP)" />
     <MESSAGE value="input Daemon link Added (UDP) with UDPClient" />
     <MESSAGE value="output Daemon link Added (UDP) with UDPServer" />
     <MESSAGE value="output Daemon link Added (UDP) with UDPServer-- Bug fixed" />
@@ -955,7 +953,8 @@
     <MESSAGE value="Add Central Control file" />
     <MESSAGE value=" fix bug in control client" />
     <MESSAGE value="Add debig line for Client" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add debig line for Client" />
+    <MESSAGE value="Config file reader Change to capture the process name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Config file reader Change to capture the process name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,7 +1,7 @@
 controldeamon:
     ip: 127.0.0.1
     port: 8080
-    type: client                #clent and server are only allowed
+    type: client                  #clent and server are only allowed
     protocol: tcp               #tcp udp websocket are only allowed
     name: cntrldeamon           #Do not chnage this name
 inputdeamon:
@@ -19,3 +19,4 @@ outputdeamon:
 metadata:
     deviceparameters: -p 100 -q 10000
     programparameters: -t 100 -y 10000
+processname: a
